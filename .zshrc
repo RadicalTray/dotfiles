@@ -63,6 +63,11 @@ alias gcm="git commit -m"
 alias gd="git diff"
 alias gds="git diff --staged"
 
+alias gf="git fetch"
+alias gfl="git fetch;git log HEAD..FETCH_HEAD"
+alias gflo="git fetch;git log HEAD..FETCH_HEAD --oneline"
+alias gfd="git fetch;git diff HEAD..FETCH_HEAD"
+
 alias gl="git log"
 alias glo="git log --oneline"
 
