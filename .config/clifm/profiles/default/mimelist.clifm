@@ -113,7 +113,7 @@ X:N:.*\.abw$=abiword;libreoffice;soffice;ooffice
 # Only for the open-with command (ow) and the --open command line switch
 # In graphical environments directories will be opened in a new window
 
-X:inode/directory=xterm -e clifm %f &;xterm -e vifm %f &;pcmanfm %f &;thunar %f &;xterm -e ncdu %f &
+X:inode/directory=wezterm -e clifm %f &;xterm -e clifm %f &;xterm -e vifm %f &;pcmanfm %f &;thunar %f &;xterm -e ncdu %f &
 !X:inode/directory=vifm;ranger;nnn;ncdu
 
 #-----------------------------
@@ -158,8 +158,8 @@ X:.*/pdf$=mupdf;sioyek;llpp;lpdf;zathura;mupdf-x11;apvlv;xpdf;xreader;evince;atr
 #-----------------------------
 
 X:^image/gif$=animate;pqiv;sxiv -a;nsxiv -a;feh
-X:^image/svg=display;inkscape
-X:^image/.*=sxiv;nsxiv;pqiv;gpicview;qview;qimgv;mirage;ristretto;eog;eom;xviewer;viewnior;nomacs;geeqie;gwenview;gthumb;gimp
+X:^image/svg=feh --conversion-timeout 1;display;inkscape
+X:^image/.*=sxiv;nsxiv;pqiv;gpicview;qview;qimgv;mirage;ristretto;eog;eom;xviewer;viewnior;feh;nomacs;geeqie;gwenview;gthumb;gimp
 !X:^image/.*=fim;img2txt;cacaview;fbi;fbv
 
 #-----------------------------
