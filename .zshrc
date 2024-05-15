@@ -32,7 +32,7 @@ alias mvy="mv"
 alias rmy="rm"
 alias cpy="cp"
 alias mv="mv -i"
-alias rm="rm -i"
+alias rm="rm -I"
 alias cp="cp -i"
 alias supacsyu="sudo pacman -Syu"
 # - Convenience
