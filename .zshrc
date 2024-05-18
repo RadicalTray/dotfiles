@@ -58,9 +58,9 @@ alias gaac="git add --all;git commit"
 alias gaacm="git add --all;git commit -m"
 
 alias gc="git commit"
+alias gcm="git commit -m"
 alias gca="git commit --all"
 alias gcam="git commit --all -m"
-alias gcm="git commit -m"
 
 alias gd="git diff"
 alias gds="git diff --staged"
