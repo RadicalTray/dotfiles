@@ -40,9 +40,9 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias ls="eza --color=auto --icons=auto"
+alias l="ls"
 alias la="ls -A"
 alias lsa="la"
-alias l="ls"
 alias grep="grep --color=auto"
 alias cat="bat --color=auto"
 # - Editor
@@ -58,6 +58,8 @@ alias gaac="git add --all;git commit"
 alias gaacm="git add --all;git commit -m"
 
 alias gc="git commit"
+alias gca="git commit --all"
+alias gcam="git commit --all -m"
 alias gcm="git commit -m"
 
 alias gd="git diff"
@@ -128,7 +130,7 @@ _fzf_comprun() {
 # ----------
 
 eval "$(zoxide init zsh)"
-source ~/Repos/powerlevel10k/powerlevel10k.zsh-theme
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ## This needs to be at the end of the file
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
