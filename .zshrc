@@ -17,8 +17,9 @@ SAVEHIST=10000
 zstyle :compinstall filename '/home/luna/.zshrc'
 autoload -Uz compinit
 compinit
-# - Case-insensitive completion
+
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 # Vim keybinds
 bindkey -v
@@ -77,7 +78,7 @@ alias gs="git status"
 alias lg="lazygit"
 # - Misc
 alias imgcat="wezterm imgcat"
-
+alias fm="clifm ."
 
 # Plugins
 export BAT_THEME=fly16
