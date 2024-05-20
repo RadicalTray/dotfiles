@@ -8,6 +8,8 @@
 # Prompt
 PS1="[\u@\h \W]\$ "
 
+~/.reminder.sh
+
 alias ls="ls --color=auto"
 alias l="ls"
 alias la="ls -A"
@@ -16,9 +18,9 @@ alias grep="grep --color=auto"
 alias mv="mv -i"
 alias rm="rm -I"
 alias cp="cp -i"
-alias supacsyu="sudo pacman -Syu"
 alias sudo='doas'
 alias sudoedit='doasedit'
+alias supacsyu="sudo pacman -Syu"
 
 complete -F _command doas
 
