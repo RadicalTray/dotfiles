@@ -211,3 +211,6 @@ client.focused_inactive #000000 #000000 #ffffff #484e50 #5f676a
 client.unfocused        #000000 #000000 #777777 #292d2e #222222
 
 gaps inner 5
+
+# <mod-a-e>
+bindsym $mod+Mod1+e exec "rofi -modi emoji -show emoji"

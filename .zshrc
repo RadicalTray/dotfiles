@@ -1,3 +1,9 @@
+# NOTE: REMINDER :D
+
+~/.reminder.sh
+
+# -----------------
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -29,6 +35,8 @@ bindkey "^[[1;5C" forward-word
 
 # Aliases
 # - Security
+alias sudo='doas'
+alias sudoedit='doasedit'
 alias mvy="mv"
 alias rmy="rm"
 alias cpy="cp"
@@ -149,6 +157,7 @@ source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.plugin.zsh
 # ----------
 
 eval "$(zoxide init zsh)"
+source /usr/share/nvm/init-nvm.sh
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ## This needs to be at the end of the file

@@ -17,3 +17,9 @@ alias mv="mv -i"
 alias rm="rm -I"
 alias cp="cp -i"
 alias supacsyu="sudo pacman -Syu"
+alias sudo='doas'
+alias sudoedit='doasedit'
+
+complete -F _command doas
+
+source /usr/share/nvm/init-nvm.sh
