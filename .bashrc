@@ -8,7 +8,9 @@
 # Prompt
 PS1="[\u@\h \W]\$ "
 
-~/.reminder.sh
+~/.Scripts/reminder.sh
+
+complete -F _command doas
 
 alias ls="ls --color=auto"
 alias l="ls"

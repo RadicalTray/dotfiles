@@ -1,6 +1,6 @@
 # NOTE: REMINDER :D
 
-~/.reminder.sh
+~/.Scripts/reminder.sh
 
 # -----------------
 
