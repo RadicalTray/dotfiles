@@ -18,10 +18,6 @@ alias grep="grep --color=auto"
 alias mv="mv -i"
 alias rm="rm -I"
 alias cp="cp -i"
-alias sudo='doas'
-alias sudoedit='doasedit'
 alias supacsyu="sudo pacman -Syu"
-
-complete -F _command doas
 
 source /usr/share/nvm/init-nvm.sh

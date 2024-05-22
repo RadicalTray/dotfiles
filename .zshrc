@@ -35,8 +35,6 @@ bindkey "^[[1;5C" forward-word
 
 # Aliases
 # - Security
-alias sudo='doas'
-alias sudoedit='doasedit'
 alias mvy="mv"
 alias rmy="rm"
 alias cpy="cp"
@@ -87,6 +85,7 @@ alias lg="lazygit"
 # - Misc
 alias imgcat="wezterm imgcat"
 alias fm="clifm ."
+alias update-neovim-nightly="cd ~/.cache/paru/clone/neovim-nightly-bin;makepkg -si;cd -"
 
 # Plugins
 export BAT_THEME=fly16
