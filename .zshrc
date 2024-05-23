@@ -88,7 +88,7 @@ alias fm="clifm ."
 alias update-neovim-nightly="cd ~/.cache/paru/clone/neovim-nightly-bin;makepkg -si;cd -"
 
 # Plugins
-export BAT_THEME=fly16
+export BAT_THEME=gruvbox-dark
 
 # - fzf
 # -- fzf configs
