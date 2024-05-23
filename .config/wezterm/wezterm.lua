@@ -26,7 +26,7 @@ config.window_padding = {
   bottom = 0,
 }
 
-config.color_scheme = 'Moonfly (Gogh)'
+config.color_scheme = 'GruvboxDarkHard'
 config.colors = {
   background = '#080808',
   tab_bar = {
