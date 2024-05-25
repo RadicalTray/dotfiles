@@ -26,7 +26,7 @@ config.window_padding = {
   bottom = 0,
 }
 
-config.color_scheme = 'Kanagawa Dragon (Gogh)'
+config.color_scheme = 'Moonfly (Gogh)'
 config.colors = {
   tab_bar = {
     background = 'rgba(0,0,0,0)',
@@ -74,11 +74,11 @@ config.background = {
   -- has a 1 px gap (small but really annoying)
   {
     source = {
-      Color = '#111313',
+      Color = '#060707',
     },
     width = '100%',
     height = '100%',
-    opacity = 0.925,
+    opacity = 0.85,
   },
   -- Highest layer
 }
