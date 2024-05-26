@@ -26,7 +26,7 @@ config.window_padding = {
   bottom = 0,
 }
 
-config.color_scheme = 'Moonfly (Gogh)'
+config.color_scheme = 'Neon'
 config.colors = {
   tab_bar = {
     background = 'rgba(0,0,0,0)',
@@ -74,7 +74,7 @@ config.background = {
   -- has a 1 px gap (small but really annoying)
   {
     source = {
-      Color = '#060707',
+      Color = '#000000',
     },
     width = '100%',
     height = '100%',
