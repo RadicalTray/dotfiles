@@ -56,7 +56,7 @@ alias cat="bat --color=auto"
 # - Editor
 alias vim="nvim"
 # - Config
-alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
+alias dotfiles='/usr/bin/git --git-dir="$HOME/.Dotfiles/" --work-tree="$HOME"'
 alias nvim-config="cd ~/.config/nvim;nvim"
 alias wezterm-config="cd ~/.config/wezterm;nvim"
 # - Git
@@ -87,6 +87,9 @@ alias lg="lazygit"
 alias imgcat="wezterm imgcat"
 alias fm="clifm ."
 alias update-neovim-nightly="cd ~/.cache/paru/clone/neovim-nightly-bin;makepkg -si;cd -"
+
+# python venv
+source ~/.Python-venv/bin/activate
 
 # Plugins
 export BAT_THEME=fly16
