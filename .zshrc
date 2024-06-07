@@ -28,7 +28,7 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 # Vim keybinds
-bindkey -v
+bindkey -e
 # Keybinds
 bindkey "^[[1;5D" backward-word
 bindkey "^[[1;5C" forward-word
