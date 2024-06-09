@@ -47,27 +47,14 @@ config.colors = {
 
 config.background = {
   -- Lowest layer
-  {
-    source = {
-      -- ff 6 from cafe (first luna render)
-      -- ff 9, ff 10 from cafe (luna drinking hot choc)
-      -- ff 23 from cafe (held hands :D)
-      -- fw 13 from werewolf
-      -- fl 62 from the barn :(
-      -- fl 67 from the barn
-      File = '/home/luna/Pictures/wallpapers/somewhere.jpeg',
-    },
-    vertical_align = 'Middle',
-    horizontal_align = 'Center',
-  },
   -- has a 1 px gap (small but really annoying)
   {
     source = {
       Color = '#000000',
     },
-    width = '20',
-    height = '20',
-    opacity = 0.99,
+    width = '100%',
+    height = '100%',
+    opacity = 0.8,
   },
   -- Highest layer
 }
