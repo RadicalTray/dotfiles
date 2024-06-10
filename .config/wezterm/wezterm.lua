@@ -18,29 +18,31 @@ config.window_padding = {
   bottom = 0,
 }
 
+config.tab_max_width = 32
+
 config.color_scheme = 'Moonfly (Gogh)'
 config.colors = {
   tab_bar = {
     background = 'rgba(0,0,0,0)',
     active_tab = {
       bg_color = 'rgba(0,0,0,0)',
-      fg_color = '#E60026',
+      fg_color = 'crimson',
     },
     inactive_tab = {
       bg_color = 'rgba(0,0,0,0)',
-      fg_color = '#58111A',
+      fg_color = 'darkred',
     },
     inactive_tab_hover = {
       bg_color = 'rgba(0,0,0,0)',
-      fg_color = '#58111A',
+      fg_color = 'darkred',
     },
     new_tab = {
       bg_color = 'rgba(0,0,0,0)',
-      fg_color = '#58111A',
+      fg_color = 'darkred',
     },
     new_tab_hover = {
       bg_color = 'rgba(0,0,0,0)',
-      fg_color = '#58111A',
+      fg_color = 'darkred',
     },
   },
 }
