@@ -27,7 +27,7 @@
         "clock",
     ],
     "hyprland/window": {
-        "min-length": 0
+        "icon": true,
     },
     "hyprland/language": {
         "format-en": "US",
