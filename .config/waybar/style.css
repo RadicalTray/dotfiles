@@ -97,7 +97,6 @@ window#waybar.empty #window {
     background-color: #eb4d4b;
 }
 
-
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left>widget:first-child>#workspaces {
     margin-left: 0;
