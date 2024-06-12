@@ -24,7 +24,7 @@ bindkey "^[[1;5D" backward-word
 bindkey "^[[1;5C" forward-word
 
 # Aliases
-# - Security
+# - System
 alias mvy="mv"
 alias rmy="rm"
 alias cpy="cp"
@@ -32,6 +32,7 @@ alias mv="mv -i"
 alias rm="rm -I"
 alias cp="cp -i"
 alias supacsyu="sudo pacman -Syu"
+alias parusyu="paru -Syu --needed"
 # - Convenience
 alias ..="cd .."
 alias ...="cd ../.."
