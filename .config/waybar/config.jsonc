@@ -1,8 +1,9 @@
 // -*- mode: jsonc -*-
 {
-    "position": "bottom",
-    "height": 30,
-    "spacing": 1, // Gaps between modules (4px)
+    "reload_style_on_change": true,
+    "position": "top",
+    "height": 48,
+    "spacing": 1,
     "modules-left": [
         "hyprland/workspaces",
         "hyprland/window",
@@ -11,19 +12,14 @@
     ],
     "modules-right": [
         "tray",
-        "mpd",
         "idle_inhibitor",
-        "pulseaudio",
+        "pulseaudio", // replace with wireplumber?
         "network",
-        "power-profiles-daemon",
-        "cpu",
-        "memory",
-        "temperature",
+        // "power-profiles-daemon",
         "backlight",
         "keyboard-state",
         "hyprland/language",
         "battery",
-        "battery#bat2",
         "clock",
     ],
     "hyprland/window": {
@@ -46,33 +42,8 @@
             "unlocked": " "
         }
     },
-    "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-        "unknown-tag": "N/A",
-        "interval": 5,
-        "consume-icons": {
-            "on": " "
-        },
-        "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
-            "on": " "
-        },
-        "repeat-icons": {
-            "on": " "
-        },
-        "single-icons": {
-            "on": "1 "
-        },
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
-    },
     "idle_inhibitor": {
+        "min-length": 4,
         "format": "{icon}",
         "format-icons": {
             "activated": "",
@@ -80,11 +51,9 @@
         }
     },
     "tray": {
-        // "icon-size": 21,
         "spacing": 10
     },
     "clock": {
-        // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%a, %b %d, %Y [%H:%M]}"
     },
