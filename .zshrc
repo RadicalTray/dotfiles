@@ -76,7 +76,7 @@ alias lg="lazygit"
 # - Misc
 alias imgcat="wezterm imgcat"
 alias fm="clifm ."
-alias update-neovim-nightly="cd ~/.cache/paru/clone/neovim-nightly-bin;makepkg -si;cd -"
+alias update-neovim-nightly="cd ~/.cache/paru/clone/neovim-nightly-bin;makepkg -si --needed;cd -"
 
 # python venv
 source ~/.Python-venv/bin/activate
