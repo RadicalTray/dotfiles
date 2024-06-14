@@ -17,7 +17,7 @@ compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
-# Vim keybinds
+# Emacs keybinds
 bindkey -e
 # Keybinds
 bindkey "^[[1;5D" backward-word
@@ -40,8 +40,10 @@ alias ....="cd ../../.."
 alias cl="clear"
 alias ls="eza --color=auto --icons=auto"
 alias l="ls"
+alias ll="ls -l"
 alias la="ls -A"
-alias lsa="la"
+alias lla="ls -lA"
+alias lal="lla"
 alias grep="grep --color=auto"
 alias cat="bat --color=auto"
 # - Editor
@@ -77,7 +79,7 @@ alias lg="lazygit"
 # - Misc
 alias imgcat="wezterm imgcat"
 alias fm="clifm ."
-alias update-neovim-nightly="cd ~/.cache/paru/clone/neovim-nightly-bin;makepkg -si --needed;cd -"
+alias update-neovim-nightly="(cd ~/.cache/paru/clone/neovim-nightly-bin;makepkg -si --needed)"
 
 # python venv
 source ~/.Python-venv/bin/activate
