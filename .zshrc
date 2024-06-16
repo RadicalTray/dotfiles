@@ -9,13 +9,15 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
-# Completion config
+# The following lines were added by compinstall
+
+zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle :compinstall filename '/home/luna/.zshrc'
+
 autoload -Uz compinit
 compinit
-
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+# End of lines added by compinstall
 
 # Emacs keybinds
 bindkey -e

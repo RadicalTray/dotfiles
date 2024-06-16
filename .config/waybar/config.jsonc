@@ -1,7 +1,7 @@
 // -*- mode: jsonc -*-
 {
     // "reload_style_on_change": true,
-    "position": "top",
+    "position": "bottom",
     "height": 48,
     "spacing": 1,
     "modules-left": [
