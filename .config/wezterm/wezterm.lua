@@ -6,7 +6,7 @@ config.front_end = 'WebGpu'
 -- config.font = wezterm.font("DejaVu Sans Mono")
 config.font = wezterm.font 'Hack'
 -- config.font = wezterm.font("Fira Code")
-config.font_size = 17
+config.font_size = 16
 
 config.tab_bar_at_bottom = true
 config.use_fancy_tab_bar = false
@@ -20,7 +20,7 @@ config.window_padding = {
 
 config.tab_max_width = 32
 
-config.color_scheme = 'Moonfly (Gogh)'
+config.color_scheme = 'rose-pine'
 config.colors = {
   tab_bar = {
     background = 'rgba(0,0,0,0)',

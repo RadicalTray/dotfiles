@@ -87,7 +87,7 @@ alias update-neovim-nightly="(cd ~/.cache/paru/clone/neovim-nightly-bin;makepkg 
 source ~/.Python-venv/bin/activate
 
 # Plugins
-export BAT_THEME=fly16
+export BAT_THEME=rose-pine
 
 # - fzf
 # -- fzf configs
