@@ -108,18 +108,17 @@ window#waybar.empty #window {
 }
 
 #clock {
-    background-color: #64727D;
+    background-color: black;
 }
 
 #battery {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: black;
 }
 
 #battery.charging,
 #battery.plugged {
-    color: #ffffff;
-    background-color: #26A65B;
+    color: green;
+    background-color: black;
 }
 
 @keyframes blink {
@@ -131,8 +130,8 @@ window#waybar.empty #window {
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
+    background-color: black;
+    color: red;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -164,15 +163,16 @@ label:focus {
 }
 
 #backlight {
-    background-color: #90b1b1;
+    background-color: black;
 }
 
 #network {
-    background-color: #2980b9;
+    background-color: black;
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
+    background-color: black;
+    color: red;
 }
 
 #pulseaudio {
@@ -180,15 +180,12 @@ label:focus {
     color: white;
 }
 
-#pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
-}
+/* #pulseaudio.muted { */
+/* } */
 
 /* you can set a style on hover for any module like this */
-#pulseaudio:hover {
-    background-color: #a37800;
-}
+/* #pulseaudio:hover { */
+/* } */
 
 /*
 #wireplumber {
@@ -201,7 +198,7 @@ label:focus {
 */
 
 #tray {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 #tray>.passive {
@@ -225,13 +222,13 @@ label:focus {
 
 #language {
     padding: 0 4px;
-    background: #00b093;
+    background: black;
     color: white;
 }
 
 #keyboard-state {
-    background: #97e1ad;
-    color: #000000;
+    background: black;
+    color: white;
     min-width: 16px;
 }
 
