@@ -17,7 +17,6 @@
         "network",
         // "power-profiles-daemon",
         "backlight",
-        "keyboard-state",
         "hyprland/language",
         "battery",
         "clock",
