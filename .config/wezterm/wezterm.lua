@@ -20,36 +20,18 @@ config.window_padding = {
 
 config.tab_max_width = 32
 
-local rose_pine = wezterm.color.get_builtin_schemes()['rose-pine']
-local active = rose_pine.foreground
-local inactive = rose_pine.selection_bg
+-- local custom_theme = wezterm.color.get_builtin_schemes()['carbonfox']
+-- local theme_tab_bar = custom_theme.tab_bar
+-- theme_tab_bar.background = 'none'
+-- for _, key in ipairs { 'active_tab', 'inactive_tab' } do
+--   theme_tab_bar[key].bg_color = 'none'
+-- end
+--
+-- config.color_schemes = {
+--   ['carbonfox transparent'] = custom_theme,
+-- }
 
-config.color_scheme = 'rose-pine'
-config.colors = {
-  tab_bar = {
-    background = 'none',
-    active_tab = {
-      bg_color = 'none',
-      fg_color = active,
-    },
-    inactive_tab = {
-      bg_color = 'none',
-      fg_color = inactive,
-    },
-    inactive_tab_hover = {
-      bg_color = 'none',
-      fg_color = inactive,
-    },
-    new_tab = {
-      bg_color = 'none',
-      fg_color = inactive,
-    },
-    new_tab_hover = {
-      bg_color = 'none',
-      fg_color = inactive,
-    },
-  },
-}
+config.color_scheme = 'carbonfox'
 
 config.background = {
   -- Lowest layer
