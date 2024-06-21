@@ -1,3 +1,4 @@
+# zmodload zsh/zprof
 # NOTE: REMINDER :D
 
 ~/.Scripts/reminder.sh
@@ -179,3 +180,4 @@ eval "$(zoxide init zsh)"
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ## This needs to be at the end of the file
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# zprof
