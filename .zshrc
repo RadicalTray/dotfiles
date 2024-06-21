@@ -9,15 +9,32 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
-# The following lines were added by compinstall
+# python venv [Load before activating prompt so it does not spam the prompt]
+source ~/.Python-venv/bin/activate
 
+# The following lines were added by compinstall
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-zstyle :compinstall filename '/home/luna/.zshrc'
+zstyle :compinstall filename '~/.zshrc'
 
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+#####################
+### CUSTOM PROMPT ###
+#####################
+
+autoload -Uz vcs_info
+precmd() { vcs_info }
+
+# Load Git branch info
+zstyle ':vcs_info:git:*' formats '%b '
+
+setopt PROMPT_SUBST
+
+export PROMPT='%F{blue}%~%f %F{red}${vcs_info_msg_0_}%f
+%F{green}$%f '
 
 # Emacs keybinds
 bindkey -e
@@ -36,6 +53,7 @@ alias cp="cp -i"
 alias supacsyu="sudo pacman -Syu"
 alias parusyu="paru -Syu --needed"
 # - Convenience
+alias sa="source ~/.zshrc;echo 'Config sourced.'"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -87,9 +105,6 @@ alias lg="lazygit"
 alias imgcat="wezterm imgcat"
 alias fm="clifm ."
 alias update-neovim-nightly="(cd ~/.cache/paru/clone/neovim-nightly-bin;makepkg -si --needed)"
-
-# python venv
-source ~/.Python-venv/bin/activate
 
 # Plugins
 export BAT_THEME=rose-pine
@@ -160,8 +175,7 @@ source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.plugin.zsh
 # ----------
 
 eval "$(zoxide init zsh)"
-eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/theme.toml)"
-source /usr/share/nvm/init-nvm.sh
+# source /usr/share/nvm/init-nvm.sh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ## This needs to be at the end of the file
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
