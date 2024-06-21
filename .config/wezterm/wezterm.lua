@@ -32,6 +32,11 @@ config.tab_max_width = 32
 -- }
 
 config.color_scheme = 'carbonfox'
+config.colors = {
+  tab_bar = {
+    background = 'none',
+  },
+}
 
 config.background = {
   -- Lowest layer
