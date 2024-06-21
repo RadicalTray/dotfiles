@@ -43,8 +43,11 @@ bindkey -e
 bindkey "^[[1;5D" backward-word
 bindkey "^[[1;5C" forward-word
 
-# Aliases
-# - System
+###############
+### Aliases ###
+###############
+
+# System
 alias mvy="mv"
 alias rmy="rm"
 alias cpy="cp"
@@ -53,7 +56,8 @@ alias rm="rm -I"
 alias cp="cp -i"
 alias supacsyu="sudo pacman -Syu"
 alias parusyu="paru -Syu --needed"
-# - Convenience
+
+# Convenience
 alias sa="source ~/.zshrc;echo 'Config sourced.'"
 alias ..="cd .."
 alias ...="cd ../.."
@@ -67,13 +71,20 @@ alias lla="ll -A"
 alias lal="lla"
 alias grep="grep --color=auto"
 alias cat="bat --color=auto"
-# - Editor
+
+# Editor
 alias vim="nvim"
-# - Config
+
+# Config
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.Dotfiles/" --work-tree="$HOME"'
 alias nvim-config="cd ~/.config/nvim;nvim"
 alias wezterm-config="cd ~/.config/wezterm;nvim"
-# - Git
+
+###########
+### Git ###
+###########
+alias gs="git status"
+
 alias ga="git add"
 alias gaa="git add --all"
 alias gaac="git add --all;git commit"
@@ -88,29 +99,42 @@ alias gd="git diff"
 alias gds="git diff --staged"
 
 alias gf="git fetch"
-alias gfl="git fetch;git log HEAD..FETCH_HEAD"
-alias gflo="git fetch;git log HEAD..FETCH_HEAD --oneline"
-alias gfd="git fetch;git diff HEAD..FETCH_HEAD"
+alias gfl="gf;git log HEAD..FETCH_HEAD"
+alias gflo="gfl --oneline"
+alias gflog="gflo --graph"
+alias gfd="gf;git diff HEAD..FETCH_HEAD"
 
+# LOG
 alias gl="git log --color"
-alias glo="gl --oneline"
-alias ggl="gl --graph"
-alias glg="ggl"
-alias glog="glo --graph"
-alias gglo="glog"
-alias glgo="glog"
+alias gla="gl --all"
 
-alias gs="git status"
+alias glo="gl --oneline"
+alias gloa="glo --all"
+
+alias glg="gl --graph"
+alias glga="glg --all"
+
+alias glog="glo --graph"
+alias gloga="glog --all"
+
+# LAZYGIT
 alias lg="lazygit"
-# - Misc
+
+############
+### Misc ###
+############
+
 alias imgcat="wezterm imgcat"
 alias fm="clifm ."
 alias update-neovim-nightly="(cd ~/.cache/paru/clone/neovim-nightly-bin;makepkg -si --needed)"
 
-# Plugins
+###############
+### Plugins ###
+###############
+
 export BAT_THEME=rose-pine
 
-# - fzf
+# fzf
 # -- fzf configs
 eval "$(fzf --zsh)"
 
