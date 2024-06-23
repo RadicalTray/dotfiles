@@ -1,3 +1,5 @@
 echo ""
-echo -e " \u001b[32m neovim-nightly-bin\u001b[0m does not upgrade with paru. 😉"
+echo -e " MANUAL UPDATE: \u001b[32mneovim-nightly-bin\u001b[0m"
+echo " CHECK wezterm-git"
+echo " REMOVE SYMLINK '/usr/lib/libdisplay-info.so.1' WHEN hyprland-git UPDATES"
 echo ""
