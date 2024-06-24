@@ -35,7 +35,7 @@ zstyle ':vcs_info:git:*' formats '%b '
 setopt PROMPT_SUBST
 
 export PROMPT='%F{blue}%~%f %F{red}${vcs_info_msg_0_}%f
-%F{green}$%f '
+%F{green}%%%f '
 
 # Emacs keybinds
 bindkey -e
