@@ -72,9 +72,6 @@ alias lal="lla"
 alias grep="grep --color=auto"
 alias cat="bat --color=auto"
 
-# Editor
-alias vim="nvim"
-
 # Config
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.Dotfiles/" --work-tree="$HOME"'
 alias nvim-config="cd ~/.config/nvim;nvim"
@@ -124,6 +121,9 @@ alias lg="lazygit"
 ### Misc ###
 ############
 
+alias vi="nvim"
+alias vim="nvim"
+alias yz="yazi"
 alias imgcat="wezterm imgcat"
 alias fm="clifm ."
 alias update-neovim-nightly="(cd ~/.cache/paru/clone/neovim-nightly-bin;makepkg -si --needed)"
