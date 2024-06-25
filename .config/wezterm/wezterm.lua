@@ -8,6 +8,8 @@ config.font = wezterm.font 'Hack'
 -- config.font = wezterm.font("Fira Code")
 config.font_size = 16
 
+config.enable_tab_bar = false
+
 config.tab_bar_at_bottom = true
 config.use_fancy_tab_bar = false
 
