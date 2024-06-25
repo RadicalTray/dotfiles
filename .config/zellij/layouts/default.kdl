@@ -9,6 +9,7 @@ layout {
 
                 mode_normal  "#[bg=blue,fg=#000000,bold] NORMAL "
                 mode_tmux    "#[bg=green,fg=#000000,bold] TMUX "
+                mode_scroll  "#[bg=yellow,fg=#000000,bold] SCROLL "
 
                 tab_normal   "#[fg=#6C7086] {name} "
                 tab_active   "#[fg=#9399B2,bold] {name} "

@@ -1,5 +1,6 @@
 on_force_close "quit"
-copy_on_select false
+copy_on_select true
+mouse_mode true
 
 theme "nightfox"
 
@@ -16,8 +17,8 @@ keybinds clear-defaults=true {
         bind "\"" { NewPane "Down"; SwitchToMode "Normal"; }
         bind "%" { NewPane "Right"; SwitchToMode "Normal"; }
         bind "z" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
-        bind "c" { NewTab; SwitchToMode "Normal"; }
-        bind "," { SwitchToMode "RenameTab"; }
+        bind "t" { NewTab; SwitchToMode "Normal"; }
+        // bind "," { SwitchToMode "RenameTab"; }
         bind "p" { GoToPreviousTab; SwitchToMode "Normal"; }
         bind "n" { GoToNextTab; SwitchToMode "Normal"; }
         bind "Left" { MoveFocus "Left"; SwitchToMode "Normal"; }
@@ -35,5 +36,6 @@ keybinds clear-defaults=true {
     }
     scroll {
         bind "Esc" { SwitchToMode "Normal"; }
+        bind "Alt t" { SwitchToMode "Tmux"; }
     }
 }
