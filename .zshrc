@@ -55,7 +55,7 @@ alias mv="mv -i"
 alias rm="rm -I"
 alias cp="cp -i"
 alias supacsyu="sudo pacman -Syu"
-alias parusyu="paru -Syu --needed"
+alias yaysyu="yay -Syu --needed"
 
 # Convenience
 alias sa="source ~/.zshrc;echo 'Config sourced.'"
@@ -126,7 +126,7 @@ alias vim="nvim"
 alias yz="yazi"
 alias imgcat="wezterm imgcat"
 alias fm="clifm ."
-alias update-neovim-nightly="(cd ~/.cache/paru/clone/neovim-nightly-bin;makepkg -si --needed)"
+alias update-neovim-nightly="(cd ~/Repos/neovim-nightly-bin;makepkg -si --needed)"
 
 ###############
 ### Plugins ###
@@ -204,4 +204,10 @@ eval "$(zoxide init zsh)"
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ## This needs to be at the end of the file
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+##############
+### Zellij ###
+##############
+
+eval "$(zellij setup --generate-auto-start zsh)"
 # zprof
