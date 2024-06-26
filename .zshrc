@@ -124,9 +124,7 @@ alias lg="lazygit"
 
 alias vi="nvim"
 alias vim="nvim"
-alias yz="yazi"
 alias imgcat="wezterm imgcat"
-alias fm="clifm ."
 alias update-neovim-nightly="(cd ~/Repos/neovim-nightly-bin;makepkg -si --needed)"
 
 ###############
