@@ -63,7 +63,7 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias cl="clear"
-alias ls="eza --color=auto --icons=auto"
+alias ls="eza --color=auto --icons=auto --sort=type"
 alias l="ls"
 alias la="ls -A"
 alias ll="ls -lg"
@@ -133,7 +133,7 @@ alias update-neovim-nightly="(cd ~/Repos/neovim-nightly-bin;makepkg -si --needed
 ### Plugins ###
 ###############
 
-export BAT_THEME=rose-pine
+export BAT_THEME=fly16
 
 # fzf
 # -- fzf configs
