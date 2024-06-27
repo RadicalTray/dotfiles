@@ -6,7 +6,7 @@ config.front_end = 'WebGpu'
 -- config.font = wezterm.font("DejaVu Sans Mono")
 config.font = wezterm.font 'Hack'
 -- config.font = wezterm.font("Fira Code")
-config.font_size = 16
+config.font_size = 17
 
 config.enable_tab_bar = false
 
