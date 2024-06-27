@@ -3,6 +3,14 @@ local config = wezterm.config_builder()
 
 config.front_end = 'WebGpu'
 
+config.keys = {
+  {
+    key = 'l',
+    mods = 'CTRL|SHIFT',
+    action = wezterm.action.DisableDefaultAssignment,
+  },
+}
+
 -- config.font = wezterm.font("DejaVu Sans Mono")
 config.font = wezterm.font 'Hack'
 -- config.font = wezterm.font("Fira Code")
