@@ -1,5 +1,6 @@
 theme "nightfox"
 
+copy_on_select false
 pane_frames false
 
 keybinds clear-defaults=true {
