@@ -10,13 +10,14 @@ keybinds clear-defaults=true {
     shared_except "tmux" {
         bind "Alt t" { SwitchToMode "Tmux"; }
     }
+    shared_except "scroll" {
+        bind "Alt [" { SwitchToMode "Scroll"; }
+    }
     normal {
         bind "Alt t" { SwitchToMode "Tmux"; }
-        bind "Alt [" { SwitchToMode "Scroll"; }
         bind "Ctrl C" { Copy; }
     }
     tmux {
-        bind "[" { SwitchToMode "Scroll"; }
         bind "Alt t" { SwitchToMode "Normal"; }
 
         bind "\"" { NewPane "Down"; SwitchToMode "Normal"; }
@@ -60,7 +61,18 @@ keybinds clear-defaults=true {
         bind "Enter" { SwitchToMode "Normal"; }
     }
 
+    shared_among "scroll" "search" {
+        bind "j" "Down" { ScrollDown; }
+        bind "k" "Up" { ScrollUp; }
+        bind "Ctrl d" { HalfPageScrollDown; }
+        bind "Ctrl u" { HalfPageScrollUp; }
+        bind "Ctrl f" "PageDown" { PageScrollDown; }
+        bind "Ctrl b" "PageUp" { PageScrollUp; }
+        bind "g" { ScrollToTop; }
+        bind "G" { ScrollToBottom; }
+    }
     scroll {
+        bind "Alt [" { SwitchToMode "Normal"; }
         bind "e" { EditScrollback; SwitchToMode "Normal"; }
         bind "/" { SwitchToMode "EnterSearch"; SearchInput 0; }
     }
@@ -76,15 +88,5 @@ keybinds clear-defaults=true {
         bind "c" { SearchToggleOption "CaseSensitivity"; }
         bind "r" { SearchToggleOption "Wrap"; }
         bind "w" { SearchToggleOption "WholeWord"; }
-    }
-    shared_among "scroll" "search" {
-        bind "j" "Down" { ScrollDown; }
-        bind "k" "Up" { ScrollUp; }
-        bind "Ctrl d" { HalfPageScrollDown; }
-        bind "Ctrl u" { HalfPageScrollUp; }
-        bind "Ctrl f" "PageDown" { PageScrollDown; }
-        bind "Ctrl b" "PageUp" { PageScrollUp; }
-        bind "g" { ScrollToTop; }
-        bind "G" { ScrollToBottom; }
     }
 }
