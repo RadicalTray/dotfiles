@@ -15,7 +15,7 @@ keybinds clear-defaults=true {
     }
     normal {
         bind "Alt t" { SwitchToMode "Tmux"; }
-        bind "Ctrl C" { Copy; }
+        bind "Alt c" { Copy; }
     }
     tmux {
         bind "Alt t" { SwitchToMode "Normal"; }
@@ -36,7 +36,6 @@ keybinds clear-defaults=true {
         bind "J" "Down" { MovePane "Down"; SwitchToMode "Normal"; }
         bind "K" "Up" { MovePane "Up"; SwitchToMode "Normal"; }
         bind "L" "Right" { MovePane "Right"; SwitchToMode "Normal"; }
-
 
         bind "t" { NewTab; SwitchToMode "Normal"; }
         bind "," { SwitchToMode "RenameTab"; }

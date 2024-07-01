@@ -9,6 +9,16 @@ config.keys = {
     mods = 'CTRL|SHIFT',
     action = wezterm.action.DisableDefaultAssignment,
   },
+  {
+    key = 'l',
+    mods = 'ALT|SHIFT',
+    action = wezterm.action.ShowDebugOverlay,
+  },
+  {
+    key = 'c',
+    mods = 'CTRL|SHIFT',
+    action = wezterm.action.DisableDefaultAssignment,
+  },
 }
 
 -- config.font = wezterm.font("DejaVu Sans Mono")
