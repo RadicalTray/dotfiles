@@ -1,7 +1,7 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: FontAwesome, Noto Sans Mono, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 window#waybar {
@@ -15,9 +15,9 @@ window#waybar.hidden {
     opacity: 0.2;
 }
 
-window>box {
-    margin: 8px;
-}
+/* window>box { */
+/*     padding: 1px 0px; */
+/* } */
 
 button {
     /* Use box-shadow instead of border so the text isn't offset */
@@ -57,15 +57,13 @@ tooltip {
 #scratchpad,
 #power-profiles-daemon,
 #mpd {
-    padding: 0px 16px;
-    border-radius: 12px;
+    padding: 0px 8px;
 }
 
 #window {
     background-color: black;
-    padding: 0px 24px;
-    margin: 0px 2px;
-    border-radius: 12px;
+    padding: 0px 8px;
+    margin: 0px;
 }
 
 window#waybar.empty #window {
@@ -73,19 +71,15 @@ window#waybar.empty #window {
 }
 
 #workspaces {
-    margin: 0 4px;
+    background-color: black;
 }
 
 #workspaces button {
-    background-color: black;
-    color: #ffffff;
-    padding: 0 10px;
-    margin: 0 2px;
-    border-radius: 12px;
+    padding: 0 8px;
 }
 
 #workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 #workspaces button.active {
@@ -198,7 +192,7 @@ label:focus {
 */
 
 #tray {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 1);
 }
 
 #tray>.passive {
