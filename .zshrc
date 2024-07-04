@@ -124,6 +124,7 @@ alias lg="lazygit"
 ### Misc ###
 ############
 
+alias nvim-kickstart='NVIM_APPNAME="nvim-kickstart" nvim'
 alias vi="nvim"
 alias vim="nvim"
 alias imgcat="wezterm imgcat"
@@ -210,5 +211,18 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 ### Zellij ###
 ##############
 
-eval "$(zellij setup --generate-auto-start zsh)"
+export ZELLIJ_AUTO_ATTACH=true
+export ZELLIJ_AUTO_EXIT=true
+
+if [[ -z "$ZELLIJ" ]]; then
+    if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
+        zellij attach --create home
+    else
+        zellij --session home
+    fi
+
+    if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
+        exit
+    fi
+fi
 # zprof

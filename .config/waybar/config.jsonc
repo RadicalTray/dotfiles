@@ -9,9 +9,9 @@
         "hyprland/window",
     ],
     "modules-center": [
+        "tray",
     ],
     "modules-right": [
-        "tray",
         "idle_inhibitor",
         "pulseaudio", // replace with wireplumber?
         "network",
