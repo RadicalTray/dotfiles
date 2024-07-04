@@ -218,7 +218,7 @@ if [[ -z "$ZELLIJ" ]]; then
     if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
         zellij attach --create home
     else
-        zellij --session home
+        zellij
     fi
 
     if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
