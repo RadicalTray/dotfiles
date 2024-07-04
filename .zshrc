@@ -212,7 +212,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 ##############
 
 export ZELLIJ_AUTO_ATTACH=true
-export ZELLIJ_AUTO_EXIT=true
+export ZELLIJ_AUTO_EXIT=false
 
 if [[ -z "$ZELLIJ" ]]; then
     if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
