@@ -207,12 +207,15 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ## This needs to be at the end of the file
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+############################
+### Not in dotfiles repo ###
+############################
+
+source ~/.Scripts/env.sh
+
 ##############
 ### Zellij ###
 ##############
-
-export ZELLIJ_AUTO_ATTACH=true
-export ZELLIJ_AUTO_EXIT=false
 
 if [[ -z "$ZELLIJ" ]]; then
     if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
