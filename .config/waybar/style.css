@@ -76,7 +76,7 @@ window#waybar.empty #window {
 }
 
 #workspaces button {
-    padding: 0 8px;
+    padding: 0 10px;
 }
 
 #workspaces button:hover {
@@ -92,9 +92,9 @@ window#waybar.empty #window {
     background-color: #eb4d4b;
 }
 
-.modules-left {
-    /* background-color: black; */
-}
+/* .modules-left { */
+/*     background-color: black; */
+/* } */
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left>widget:first-child>#workspaces {
