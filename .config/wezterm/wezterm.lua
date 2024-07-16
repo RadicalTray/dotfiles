@@ -21,9 +21,11 @@ config.keys = {
   },
 }
 
--- config.font = wezterm.font("DejaVu Sans Mono")
-config.font = wezterm.font 'Hack'
--- config.font = wezterm.font("Fira Code")
+-- config.font = wezterm.font 'DejaVu Sans Mono'
+-- config.font = wezterm.font 'Fira Code'
+-- config.font = wezterm.font 'Hack'
+config.font = wezterm.font_with_fallback { 'Overpass Mono', 'Hack' }
+
 config.font_size = 17
 
 config.enable_tab_bar = false

@@ -72,6 +72,8 @@ alias llt="ll -T"
 alias llta="llt -A"
 alias lt="ls -T"
 alias lta="lt -A"
+alias ltg="lt --git-ignore"
+alias ltga="ltg -A"
 alias grep="grep --color=auto"
 alias cat="bat --color=auto"
 
@@ -216,6 +218,8 @@ source ~/.Scripts/env.sh
 ##############
 ### Zellij ###
 ##############
+
+# ZELLIJ=false
 
 if [[ -z "$ZELLIJ" ]]; then
     if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
