@@ -26,7 +26,7 @@ config.keys = {
 -- config.font = wezterm.font 'Hack'
 config.font = wezterm.font_with_fallback { 'Overpass Mono', 'Hack' }
 
-config.font_size = 17.5
+config.font_size = 17.25
 
 config.enable_tab_bar = false
 
