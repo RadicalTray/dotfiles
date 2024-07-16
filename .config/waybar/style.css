@@ -76,7 +76,7 @@ window#waybar.empty #window {
 }
 
 #workspaces button {
-    padding: 0 10px;
+    padding: 0 9px;
 }
 
 #workspaces button:hover {
