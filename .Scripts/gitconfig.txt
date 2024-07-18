@@ -1,0 +1,15 @@
+[diff]
+	tool = nvimdiff
+[credential]
+	helper = cache --timeout 600
+[alias]
+	hide = update-index --assume-unchanged
+	unhide = update-index --no-assume-unchanged
+	hidden = !git ls-files -v | grep ^h
+	ls-exclude = ls-files --others --exclude-from=.git/info/exclude
+	ls-local-exclude = ls-files --others --exclude-from=.git/info/exclude --ignored
+[user]
+	email = email
+	name = email
+
+; vim: set filetype=gitconfig
