@@ -1,6 +1,6 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Noto Sans Mono, Roboto, Helvetica, Arial, sans-serif;
+    font-family: FontAwesome, Noto Sans, Roboto, Helvetica, Arial, sans-serif;
     font-size: 16px;
 }
 
@@ -61,7 +61,7 @@ tooltip {
 }
 
 #window {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 0px 24px 0px 16px;
     border-radius: 0px 12px 12px 0px;
     margin: 0px;
@@ -72,7 +72,7 @@ window#waybar.empty #window {
 }
 
 #workspaces {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 #workspaces button {
@@ -92,9 +92,9 @@ window#waybar.empty #window {
     background-color: #eb4d4b;
 }
 
-/* .modules-left { */
-/*     background-color: black; */
-/* } */
+.modules-left {
+    background-color: transparent;
+}
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left>widget:first-child>#workspaces {
@@ -102,7 +102,7 @@ window#waybar.empty #window {
 }
 
 .modules-right {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 0px 0px 0px 16px;
     border-radius: 12px 0px 0px 12px;
 }
@@ -113,17 +113,17 @@ window#waybar.empty #window {
 }
 
 #clock {
-    background-color: black;
+    background-color: transparent;
 }
 
 #battery {
-    background-color: black;
+    background-color: transparent;
 }
 
 #battery.charging,
 #battery.plugged {
     color: green;
-    background-color: black;
+    background-color: transparent;
 }
 
 @keyframes blink {
@@ -135,7 +135,7 @@ window#waybar.empty #window {
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: black;
+    background-color: transparent;
     color: red;
     animation-name: blink;
     animation-duration: 0.5s;
@@ -168,20 +168,20 @@ label:focus {
 }
 
 #backlight {
-    background-color: black;
+    background-color: transparent;
 }
 
 #network {
-    background-color: black;
+    background-color: transparent;
 }
 
 #network.disconnected {
-    background-color: black;
+    background-color: transparent;
     color: red;
 }
 
 #pulseaudio {
-    background-color: black;
+    background-color: transparent;
     color: white;
 }
 
@@ -203,7 +203,7 @@ label:focus {
 */
 
 #tray {
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 12px;
 }
 
@@ -217,7 +217,7 @@ label:focus {
 }
 
 #idle_inhibitor {
-    background-color: black;
+    background-color: transparent;
     color: white;
 }
 
@@ -228,7 +228,7 @@ label:focus {
 
 #language {
     padding: 0 4px;
-    background: black;
+    background-color: transparent;
     color: white;
 }
 
