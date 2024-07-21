@@ -2,7 +2,7 @@
 {
     // "reload_style_on_change": true,
     "position": "bottom",
-    "height": 24,
+    "height": 28,
     "spacing": 0,
     "modules-left": [
         "hyprland/workspaces",
@@ -14,6 +14,7 @@
     "modules-right": [
         "idle_inhibitor",
         "pulseaudio", // replace with wireplumber?
+        "bluetooth",
         "network",
         // "power-profiles-daemon",
         "backlight",
@@ -133,4 +134,13 @@
         },
         "on-click": "pavucontrol"
     },
+    "bluetooth": {
+        // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
+        "format": " {status}",
+        "format-disabled": "", // an empty format will hide the module
+        "format-connected": " {num_connections} connected",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+    }
 }

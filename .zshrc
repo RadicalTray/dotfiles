@@ -11,7 +11,7 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 # python venv [Load before activating prompt so it does not spam the prompt]
-source ~/.Python-venv/bin/activate
+# source ~/.Python-venv/bin/activate
 
 # The following lines were added by compinstall
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
@@ -130,13 +130,13 @@ alias nvim-kickstart='NVIM_APPNAME="nvim-kickstart" nvim'
 alias vi="nvim"
 alias vim="nvim"
 alias imgcat="wezterm imgcat"
-alias update-neovim-nightly="(cd ~/Repos/neovim-nightly-bin;makepkg -si --needed)"
+alias update-neovim-nightly="(cd ~/.cache/yay/neovim-nightly-bin;makepkg -si --needed)"
 
 ###############
 ### Plugins ###
 ###############
 
-export BAT_THEME=fly16
+# export BAT_THEME=fly16
 
 # fzf
 # -- fzf configs

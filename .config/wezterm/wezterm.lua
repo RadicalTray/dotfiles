@@ -24,7 +24,7 @@ config.keys = {
 -- config.font = wezterm.font_with_fallback { 'Fira Code' }
 config.font = wezterm.font_with_fallback { 'DejaVu Sans Mono' }
 
-config.font_size = 15.4
+config.font_size = 17
 
 config.enable_tab_bar = false
 
