@@ -22,7 +22,7 @@ config.keys = {
 }
 
 -- config.font = wezterm.font_with_fallback { 'Fira Code' }
-config.font = wezterm.font_with_fallback { 'DejaVu Sans Mono' }
+config.font = wezterm.font_with_fallback { 'DejaVu Sans Mono', 'Font Awesome 6 Free', 'Font Awesome 6 Brands' }
 
 config.font_size = 17
 

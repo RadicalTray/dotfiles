@@ -75,7 +75,7 @@ alias lta="lt -A"
 alias ltg="lt --git-ignore"
 alias ltga="ltg -A"
 alias grep="grep --color=auto"
-alias cat="bat --color=auto"
+alias cat="bat --plain --color=auto"
 
 # Config
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.Dotfiles/" --work-tree="$HOME"'

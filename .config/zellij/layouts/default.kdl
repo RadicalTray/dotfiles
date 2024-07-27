@@ -5,7 +5,7 @@ layout {
             plugin location="https://github.com/dj95/zjstatus/releases/latest/download/zjstatus.wasm" {
                 format_left   "{mode} #[fg=#B6B8BB]{session} | {tabs}"
                 format_center ""
-                format_right  "{notifications}"
+                format_right  "{notifications} {datetime}"
 
                 mode_normal         "#[bg=blue,fg=#000000,bold] NORMAL "
                 mode_tmux           "#[bg=yellow,fg=#000000,bold] TMUX "
@@ -18,8 +18,12 @@ layout {
                 tab_active  "#[fg=white] -{index}: {name}- "
 
                 notification_format_unread           "#[bg=blue,fg=#000000,blink]  #[fg=#89B4FA,bg=#181825] {message} "
-                notification_format_no_notifications "#[bg=blue,fg=#000000,dim]   "
+                notification_format_no_notifications ""
                 notification_show_interval           "10"
+
+                datetime        "#[bg=blue,fg=#000000,bold] {format} "
+                datetime_format "%H:%M"
+                datetime_timezone "Asia/Bangkok"
             }
         }
     }
