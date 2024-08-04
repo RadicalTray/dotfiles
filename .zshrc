@@ -55,6 +55,7 @@ alias mv="mv -i"
 alias rm="rm -I"
 alias cp="cp -i"
 alias supacsyu="sudo pacman -Syu"
+alias parusyu="paru -Syu --needed"
 alias yaysyu="yay -Syu --needed"
 
 # Convenience
@@ -130,7 +131,7 @@ alias nvim-kickstart='NVIM_APPNAME="nvim-kickstart" nvim'
 alias vi="nvim"
 alias vim="nvim"
 alias imgcat="wezterm imgcat"
-alias update-neovim-nightly="(cd ~/.cache/yay/neovim-nightly-bin;makepkg -si --needed)"
+alias update-neovim-nightly="(cd ~/.cache/paru/clone/neovim-nightly-bin;makepkg -si --needed)"
 
 ###############
 ### Plugins ###
