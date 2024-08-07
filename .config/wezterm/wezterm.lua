@@ -3,26 +3,27 @@ local config = wezterm.config_builder()
 
 config.front_end = 'WebGpu'
 
+config.disable_default_key_bindings = true
 config.keys = {
-  {
-    key = 'l',
-    mods = 'CTRL|SHIFT',
-    action = wezterm.action.DisableDefaultAssignment,
-  },
+  -- {
+  --   key = 'l',
+  --   mods = 'CTRL|SHIFT',
+  --   action = wezterm.action.DisableDefaultAssignment,
+  -- },
   {
     key = 'l',
     mods = 'ALT|SHIFT',
     action = wezterm.action.ShowDebugOverlay,
   },
-  {
-    key = 'c',
-    mods = 'CTRL|SHIFT',
-    action = wezterm.action.DisableDefaultAssignment,
-  },
+  -- {
+  --   key = 'c',
+  --   mods = 'CTRL|SHIFT',
+  --   action = wezterm.action.DisableDefaultAssignment,
+  -- },
 }
 
 -- config.font = wezterm.font_with_fallback { 'Fira Code' }
-config.font = wezterm.font_with_fallback { 'DejaVu Sans Mono', 'Font Awesome 6 Free', 'Font Awesome 6 Brands' }
+config.font = wezterm.font_with_fallback { 'Fira Code', 'Font Awesome 6 Free', 'Font Awesome 6 Brands' }
 
 config.font_size = 17
 
@@ -67,7 +68,7 @@ config.background = {
     },
     width = '100%',
     height = '100%',
-    opacity = 0.8,
+    opacity = 0.6,
   },
   -- Highest layer
 }
