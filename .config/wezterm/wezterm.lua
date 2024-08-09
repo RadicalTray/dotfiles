@@ -23,9 +23,9 @@ config.keys = {
 }
 
 -- config.font = wezterm.font_with_fallback { 'Fira Code' }
-config.font = wezterm.font_with_fallback { 'Fira Code', 'Font Awesome 6 Free', 'Font Awesome 6 Brands' }
+config.font = wezterm.font_with_fallback { 'Fira Mono', 'Font Awesome 6 Free', 'Font Awesome 6 Brands' }
 
-config.font_size = 17
+config.font_size = 18
 
 config.enable_tab_bar = false
 

@@ -10,9 +10,6 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
-# python venv [Load before activating prompt so it does not spam the prompt]
-# source ~/.Python-venv/bin/activate
-
 # The following lines were added by compinstall
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
@@ -214,6 +211,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 ### Not in dotfiles repo ###
 ############################
 
+# python venv, source the activate script in here, maybe move the zsh prompt below this so python venv don't spam it
 source ~/.Scripts/env.sh
 
 ##############
