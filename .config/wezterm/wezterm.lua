@@ -3,23 +3,23 @@ local config = wezterm.config_builder()
 
 config.front_end = 'WebGpu'
 
-config.disable_default_key_bindings = true
+config.disable_default_key_bindings = false
 config.keys = {
-  -- {
-  --   key = 'l',
-  --   mods = 'CTRL|SHIFT',
-  --   action = wezterm.action.DisableDefaultAssignment,
-  -- },
+  {
+    key = 'l',
+    mods = 'CTRL|SHIFT',
+    action = wezterm.action.DisableDefaultAssignment,
+  },
   {
     key = 'l',
     mods = 'ALT|SHIFT',
     action = wezterm.action.ShowDebugOverlay,
   },
-  -- {
-  --   key = 'c',
-  --   mods = 'CTRL|SHIFT',
-  --   action = wezterm.action.DisableDefaultAssignment,
-  -- },
+  {
+    key = 'c',
+    mods = 'CTRL|SHIFT',
+    action = wezterm.action.DisableDefaultAssignment,
+  },
 }
 
 -- config.font = wezterm.font_with_fallback { 'Fira Code' }
