@@ -54,23 +54,25 @@ config.tab_max_width = 32
 
 config.color_scheme = 'carbonfox'
 config.colors = {
-  tab_bar = {
-    background = 'none',
-  },
+  background = '#000000',
+  -- tab_bar = {
+  --   background = 'none',
+  -- },
 }
+config.window_background_opacity = 0.8
 
-config.background = {
-  -- Lowest layer
-  -- has a 1 px gap (small but really annoying)
-  {
-    source = {
-      Color = '#000000',
-    },
-    width = '100%',
-    height = '100%',
-    opacity = 0.6,
-  },
-  -- Highest layer
-}
+-- config.background = {
+--   -- Lowest layer
+--   -- has a 1 px gap (small but really annoying)
+--   {
+--     source = {
+--       Color = '#000000',
+--     },
+--     width = '100%',
+--     height = '100%',
+--     opacity = 0.8,
+--   },
+--   -- Highest layer
+-- }
 
 return config

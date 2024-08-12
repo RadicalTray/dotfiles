@@ -3,6 +3,19 @@
 
 ~/.Scripts/reminder.sh
 
+# No Color
+# nc='\033[0m'
+
+# Regular
+# black='\033[0;30m'
+# red='\033[0;31m'
+# green='\033[0;32m'
+# yellow='\033[0;33m'
+# blue='\033[0;34m'
+# purple='\033[0;35m'
+# cyan='\033[0;36m'
+# white='\033[0;37m'
+
 # -----------------
 
 # History config
@@ -23,20 +36,53 @@ compinit
 ### CUSTOM PROMPT ###
 #####################
 
+# allows parameter expansion, arithmatic, and shell substitution in prompts
+setopt prompt_subst
+
 autoload -Uz vcs_info
-precmd() { vcs_info }
 
-# Load Git branch info
-zstyle ':vcs_info:git:*' formats '%b '
+# this makes it slow, there is an optimization for it but it has a problem
+# and i probably won't have that large of a repo
+zstyle ':vcs_info:*' check-for-changes true
 
-setopt PROMPT_SUBST
+# Alternatively, the following would set only %c, but is faster:
+#zstyle ':vcs_info:*' check-for-changes false
+#zstyle ':vcs_info:*' check-for-staged-changes true
 
-export PROMPT='%F{blue}%~%f %F{red}${vcs_info_msg_0_}%f
+zstyle ':vcs_info:*' get-revision true
+zstyle ':vcs_info:*' unstagedstr '%F{yellow} *%f'
+zstyle ':vcs_info:*' stagedstr '%F{green} +%f'
+zstyle ':vcs_info:git:*' formats '%F{magenta}[%s]%f %F{red}(%b)%f%u%c'
+zstyle ':vcs_info:git:*' actionformats '%F{magenta}[%s]%f %F{red}%b%f (%a)%u%c'
+precmd_functions+=(vcs_info) # does not have to be after zstyle btw
+
+function check_last_exit_code() {
+  local LAST_EXIT_CODE=$?
+  if [[ $LAST_EXIT_CODE -ne 0 ]]; then
+    RPROMPT="%F{red}-%B$LAST_EXIT_CODE%b-%f"
+  else
+    RPROMPT="%F{green}-%B$LAST_EXIT_CODE%b-%f"
+  fi
+}
+precmd_functions+=(check_last_exit_code)
+
+# This works but i don't think it looks clean,
+# and also because if check_last_exit_code is placed after vcs_info then
+# it use vcs_info's exit code (which is probably always 0)
+#
+# precmd() {
+#   check_last_exit_code;
+#   vcs_info;
+# }
+
+PROMPT='%F{blue}%~%f ${vcs_info_msg_0_}
 %F{green}%%%f '
 
-# Emacs keybinds
+################
+### Keybinds ###
+################
+
 bindkey -e
-# Keybinds
 bindkey "^[[1;5D" backward-word
 bindkey "^[[1;5C" forward-word
 
@@ -130,6 +176,19 @@ alias vim="nvim"
 alias imgcat="wezterm imgcat"
 alias update-neovim-nightly="(cd ~/.cache/paru/clone/neovim-nightly-bin;makepkg -si --needed)"
 
+#####################
+### Command Hooks ###
+#####################
+
+autoload -Uz add-zsh-hook
+
+# Is this like sending fn() instead of fn or ()=>{fn()} to a prop in react?
+# add-zsh-hook -Uz chpwd (){ ls }
+
+# no idea what the -Uz is for here
+do-ls() { ls -a }
+add-zsh-hook -Uz chpwd do-ls
+
 ###############
 ### Plugins ###
 ###############
@@ -217,8 +276,6 @@ source ~/.Scripts/env.sh
 ##############
 ### Zellij ###
 ##############
-
-# ZELLIJ=false
 
 if [[ -z "$ZELLIJ" ]]; then
     if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
