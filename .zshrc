@@ -174,20 +174,24 @@ alias nvim-kickstart='NVIM_APPNAME="nvim-kickstart" nvim'
 alias vi="nvim"
 alias vim="nvim"
 alias imgcat="wezterm imgcat"
-alias update-neovim-nightly="(cd ~/.cache/paru/clone/neovim-nightly-bin;makepkg -si --needed)"
+
+update-neovim-nightly() {
+  emulate -LR zsh
+  local NEOVIM_REPO_PATH=~/.cache/paru/clone/neovim-nightly-bin
+  zsh -c -- "cd $NEOVIM_REPO_PATH; makepkg -si --needed"
+}
 
 #####################
 ### Command Hooks ###
 #####################
 
-autoload -Uz add-zsh-hook
+# autoload -Uz add-zsh-hook
 
 # Is this like sending fn() instead of fn or ()=>{fn()} to a prop in react?
 # add-zsh-hook -Uz chpwd (){ ls }
 
-# no idea what the -Uz is for here
 do-ls() { ls -a }
-add-zsh-hook -Uz chpwd do-ls
+chpwd_functions+=(do-ls)
 
 ###############
 ### Plugins ###
