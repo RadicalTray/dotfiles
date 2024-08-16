@@ -76,5 +76,5 @@ green='\033[0;32m'
 
 echo
 echo -e " ${bold}MANUAL UPDATE:${normal} ${green}neovim-nightly-bin${nc}"
-echo -e "         ${bold}CHECK:${normal} ${red}wezterm-git${nc}"
+# echo -e "         ${bold}CHECK:${normal} ${red}wezterm-git${nc}"
 echo
