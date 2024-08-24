@@ -170,6 +170,16 @@ alias lg="lazygit"
 ### Misc ###
 ############
 
+export MY_MONITOR=DP-1
+set-hyprpaper() {
+  hyprctl hyprpaper preload $1
+  local monitor=$2
+  if [[ -z "$monitor" ]]; then
+    monitor=$MY_MONITOR # set it in env.sh
+  fi
+  hyprctl hyprpaper wallpaper $monitor,$1
+}
+
 alias nvim-kickstart='NVIM_APPNAME="nvim-kickstart" nvim'
 alias vi="nvim"
 alias vim="nvim"
