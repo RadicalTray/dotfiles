@@ -3,6 +3,14 @@
 declare -a cmd_label
 declare -a cmd
 
+cmd_label+=("Calculator")
+run_calc() {
+    rofi -show calc -modi calc -no-show-match -no-sort \
+         -calc-command "wl-copy '{result}'" \
+         -no-show-icons -hint-welcome "Waiting for input..."
+}
+cmd+=(run_calc)
+
 cmd_label+=("Capture Desktop")
 shotdisplay() {
     hyprshot -m output
@@ -21,16 +29,11 @@ shotregion() {
 }
 cmd+=(shotregion)
 
-cmd_label+=("Calculator")
-run_calc() {
-    rofi -show calc -modi calc -no-show-match -no-sort
-}
-cmd+=(run_calc)
-
 rofi_cmd() {
     rofi \
         -theme-str "listview {columns: 1; lines: ${#cmd[@]};}" \
         -dmenu \
+        -no-show-icons \
         -p "Command:" \
         -i \
         -matching fuzzy

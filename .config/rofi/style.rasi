@@ -11,9 +11,7 @@ configuration {
     selected:       #5294E2FF;
     active:         #98C379FF;
     urgent:         #E06B74FF;
-}
 
-* {
     font: "Fira Code 12";
 }
 
@@ -45,11 +43,10 @@ mainbox {
     border-radius:               0px 0px 0px 0px;
     border-color:                @selected;
     background-color:            transparent;
-    children:                    [ "inputbar", "listview" ];
+    children:                    [ "inputbar", "message", "listview" ];
 }
 
 inputbar {
-    enabled:                     true;
     spacing:                     10px;
     margin:                      0px;
     padding:                     15px;
@@ -66,6 +63,7 @@ prompt {
     background-color:            inherit;
     text-color:                  inherit;
 }
+
 textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
@@ -73,6 +71,7 @@ textbox-prompt-colon {
     background-color:            inherit;
     text-color:                  inherit;
 }
+
 entry {
     enabled:                     true;
     background-color:            inherit;
@@ -80,6 +79,17 @@ entry {
     cursor:                      text;
     placeholder:                 "Search...";
     placeholder-color:           inherit;
+}
+
+message {
+    spacing:                     0px;
+    margin:                      0px;
+    padding:                     16px 8px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @selected;
+    background-color:            @background;
+    text-color:                  @background;
 }
 
 listview {
@@ -93,7 +103,7 @@ listview {
     reverse:                     false;
     fixed-height:                true;
     fixed-columns:               true;
-    spacing:                     5px;
+    spacing:                     0px;
     margin:                      0px;
     padding:                     0px;
     border:                      0px solid;
@@ -103,6 +113,7 @@ listview {
     text-color:                  @foreground;
     cursor:                      "default";
 }
+
 scrollbar {
     handle-width:                5px ;
     handle-color:                @selected;
@@ -122,20 +133,24 @@ element {
     text-color:                  @foreground;
     cursor:                      pointer;
 }
+
 element normal.normal {
     background-color:            @background;
     text-color:                  @foreground;
 }
+
 element selected.normal {
     background-color:            @background-alt;
     text-color:                  @foreground;
 }
+
 element-icon {
     background-color:            transparent;
     text-color:                  inherit;
     size:                        32px;
     cursor:                      inherit;
 }
+
 element-text {
     background-color:            transparent;
     text-color:                  inherit;
@@ -153,6 +168,7 @@ error-message {
     background-color:            @background;
     text-color:                  @foreground;
 }
+
 textbox {
     background-color:            @background;
     text-color:                  @foreground;
