@@ -3,19 +3,6 @@
 
 ~/.Scripts/reminder.sh
 
-# No Color
-# nc='\033[0m'
-
-# Regular
-# black='\033[0;30m'
-# red='\033[0;31m'
-# green='\033[0;32m'
-# yellow='\033[0;33m'
-# blue='\033[0;34m'
-# purple='\033[0;35m'
-# cyan='\033[0;36m'
-# white='\033[0;37m'
-
 # -----------------
 
 # History config
@@ -31,6 +18,13 @@ zstyle :compinstall filename '~/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+###########
+### Env ###
+###########
+
+# put python venv in here, and if you want the python venv prompt thingy source env.sh after setting prompt
+source ~/.Scripts/env.sh
 
 #####################
 ### CUSTOM PROMPT ###
@@ -170,14 +164,49 @@ alias lg="lazygit"
 ### Misc ###
 ############
 
-export MY_MONITOR=DP-1
 set-hyprpaper() {
-  hyprctl hyprpaper preload $1
+  # No Color
+  local nc='\033[0m'
+  # Regular
+  # local black='\033[0;30m'
+  local red='\033[0;31m'
+  local green='\033[0;32m'
+  # local yellow='\033[0;33m'
+  # local blue='\033[0;34m'
+  # local purple='\033[0;35m'
+  # local cyan='\033[0;36m'
+  # local white='\033[0;37m'
+
+  if [[ "$#" -lt 1 ]] || [[ "$#" -gt 2 ]]; then
+    echo -e "usage: set-hyprpaper <path> [monitor]" >&2
+    return 1
+  fi
+
+  local preload_ret=$(hyprctl hyprpaper preload "$1")
+  if [[ "$preload_ret" = "ok" ]]; then
+    echo "${green}Wallpaper preload successful.${nc}"
+  else
+    echo "${red}Wallpaper preload unsuccessful.${nc}"
+    echo "${red}Error: ${preload_ret}${nc}"
+  fi
+
   local monitor=$2
   if [[ -z "$monitor" ]]; then
-    monitor=$MY_MONITOR # set it in env.sh
+    if [[ -z "$MY_MONITOR" ]]; then
+      echo -e "${red}MY_MONITOR variable is empty!${nc}" >&2
+      echo -e "usage: set-hyprpaper <path> [monitor]" >&2
+      return 2
+    fi
+    monitor=$MY_MONITOR
   fi
-  hyprctl hyprpaper wallpaper $monitor,$1
+
+  local wallpaper_ret=$(hyprctl hyprpaper wallpaper "$monitor,$1")
+  if [[ "$wallpaper_ret" = "ok" ]]; then
+    echo "${green}Wallpaper is set.${nc}"
+  else
+    echo "${red}Wallpaper set unsuccessful.${nc}"
+    echo "${red}Error: ${wallpaper_ret}${nc}"
+  fi
 }
 
 alias nvim-kickstart='NVIM_APPNAME="nvim-kickstart" nvim'
@@ -279,13 +308,6 @@ eval "$(zoxide init zsh)"
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ## This needs to be at the end of the file
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-############################
-### Not in dotfiles repo ###
-############################
-
-# python venv, source the activate script in here, maybe move the zsh prompt below this so python venv don't spam it
-source ~/.Scripts/env.sh
 
 ##############
 ### Zellij ###
