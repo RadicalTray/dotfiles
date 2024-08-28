@@ -12,7 +12,7 @@ configuration {
     active:         #AAFFFFFF;
     urgent:         #FFAAAAFF;
 
-    font: "Fira Code 12";
+    font: "Fira Code 14";
 }
 
 window {
