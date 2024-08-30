@@ -5,8 +5,15 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+nc='\033[0m'
+blue='\033[0;34m'
+green='\033[0;32m'
+
 # Prompt
-PS1="[\u@\h \W]\$ "
+PS1="${blue}\w
+${green}[bash]${nc} \$ "
+
+unset nc blue green
 
 ~/.Scripts/reminder.sh
 

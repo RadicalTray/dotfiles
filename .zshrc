@@ -44,18 +44,18 @@ zstyle ':vcs_info:*' check-for-changes true
 #zstyle ':vcs_info:*' check-for-staged-changes true
 
 zstyle ':vcs_info:*' get-revision true
-zstyle ':vcs_info:*' unstagedstr '%F{yellow} *%f'
-zstyle ':vcs_info:*' stagedstr '%F{green} +%f'
-zstyle ':vcs_info:git:*' formats '%F{magenta}[%s]%f %F{red}(%b)%f%u%c'
-zstyle ':vcs_info:git:*' actionformats '%F{magenta}[%s]%f %F{red}%b%f (%a)%u%c'
+zstyle ':vcs_info:*' unstagedstr ' %F{yellow}*%f'
+zstyle ':vcs_info:*' stagedstr ' %F{green}+%f'
+zstyle ':vcs_info:git:*' formats ' %F{magenta}[%s]%f %F{red}(%b)%f%u%c'
+zstyle ':vcs_info:git:*' actionformats ' %F{magenta}[%s]%f %F{red}(%b)%f <%a>%u%c'
 precmd_functions+=(vcs_info) # does not have to be after zstyle btw
 
 function check_last_exit_code() {
   local LAST_EXIT_CODE=$?
   if [[ $LAST_EXIT_CODE -ne 0 ]]; then
-    RPROMPT="%F{red}-%B$LAST_EXIT_CODE%b-%f"
+    RPROMPT="%F{red}<$LAST_EXIT_CODE>%f"
   else
-    RPROMPT="%F{green}-%B$LAST_EXIT_CODE%b-%f"
+    RPROMPT="%F{green}<$LAST_EXIT_CODE>%f"
   fi
 }
 precmd_functions+=(check_last_exit_code)
@@ -69,8 +69,8 @@ precmd_functions+=(check_last_exit_code)
 #   vcs_info;
 # }
 
-PROMPT='%F{blue}%~%f ${vcs_info_msg_0_}
-%F{green}%%%f '
+PROMPT='%F{blue}%~%f${vcs_info_msg_0_}
+%F{green}[zsh]%f %% '
 
 ################
 ### Keybinds ###
