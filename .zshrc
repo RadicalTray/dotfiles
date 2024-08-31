@@ -47,7 +47,7 @@ zstyle ':vcs_info:*' get-revision true
 zstyle ':vcs_info:*' unstagedstr ' %F{yellow}*%f'
 zstyle ':vcs_info:*' stagedstr ' %F{green}+%f'
 zstyle ':vcs_info:git:*' formats ' %F{magenta}[%s]%f %F{red}(%b)%f%u%c'
-zstyle ':vcs_info:git:*' actionformats ' %F{magenta}[%s]%f %F{red}(%b)%f <%a>%u%c'
+zstyle ':vcs_info:git:*' actionformats ' %F{magenta}[%s]%f %F{red}(%b)%f %F{cyan}<%a>%f%u%c'
 precmd_functions+=(vcs_info) # does not have to be after zstyle btw
 
 function check_last_exit_code() {
@@ -69,8 +69,8 @@ precmd_functions+=(check_last_exit_code)
 #   vcs_info;
 # }
 
-PROMPT='%F{blue}%~%f${vcs_info_msg_0_}
-%F{green}[zsh]%f %% '
+PROMPT='%F{green}[zsh]%f %F{blue}%~%f${vcs_info_msg_0_}
+%F{green}%%%f '
 
 ################
 ### Keybinds ###

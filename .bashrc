@@ -10,8 +10,8 @@ blue='\033[0;34m'
 green='\033[0;32m'
 
 # Prompt
-PS1="${blue}\w
-${green}[bash]${nc} \$ "
+PS1="${green}[bash]${nc} ${blue}\w${nc}
+${green}\$${nc} "
 
 unset nc blue green
 
