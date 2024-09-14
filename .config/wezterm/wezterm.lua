@@ -1,7 +1,7 @@
 local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
-config.front_end = 'WebGpu'
+-- config.front_end = 'WebGpu'
 
 config.disable_default_key_bindings = false
 config.keys = {
@@ -23,9 +23,10 @@ config.keys = {
 }
 
 -- config.font = wezterm.font_with_fallback { 'Fira Code' }
-config.font = wezterm.font_with_fallback { 'Fira Mono', 'Font Awesome 6 Free', 'Font Awesome 6 Brands' }
+-- config.font = wezterm.font_with_fallback { 'Fira Mono', 'Font Awesome 6 Free', 'Font Awesome 6 Brands' }
+config.font = wezterm.font_with_fallback { 'Overpass Mono' }
 
-config.font_size = 18
+config.font_size = 17.0
 
 config.enable_tab_bar = false
 
