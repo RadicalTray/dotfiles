@@ -141,18 +141,18 @@ update-neovim-nightly() {
   # local nc='\033[0m'
   local NEOVIM_REPO_PATH=~/.cache/paru/clone/neovim-nightly-bin
   (
-  cd $NEOVIM_REPO_PATH
-  makepkg -si --needed
-  # local pull_ret=$(git pull)
-  # if [[ "${pull_ret}" == 'Already up to date.' ]] then
-  #   echo
-  #   echo -e "Updating..."
-  #   makepkg -si --needed
-  # else
-  #   echo
-  #   echo -e "${red}There is an update in the aur.${nc}"
-  #   echo
-  # fi
+    cd $NEOVIM_REPO_PATH
+    makepkg -si --needed
+    # local pull_ret=$(git pull)
+    # if [[ "${pull_ret}" == 'Already up to date.' ]] then
+    #   echo
+    #   echo -e "Updating..."
+    #   makepkg -si --needed
+    # else
+    #   echo
+    #   echo -e "${red}There is an update in the aur.${nc}"
+    #   echo
+    # fi
   )
 }
 
