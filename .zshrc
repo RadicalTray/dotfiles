@@ -250,7 +250,9 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 ##############
 
 # NOTE: Zellij sets $ZELLIJ to 0 when it is in a zellij session.
-if [[ -z "$ZELLIJ" ]]; then
+# Probably DO NOT touch it.
+# Use $START_ZELLIJ (hopefully it does not conflict with anything)
+if [[ "$START_ZELLIJ" == "true" ]] && [[ -z "$ZELLIJ" ]]; then
     if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
         zellij attach --create home
     else
