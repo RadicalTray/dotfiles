@@ -1,0 +1,15 @@
+themes {
+  quiet {
+    bg "#000000"
+    fg "#dadada"
+    red "#d7005f"
+    green "#00af5f"
+    blue "#0087d7"
+    yellow "#08bdba"
+    magenta "#d787d7"
+    orange "#d78700"
+    cyan "#00afaf"
+    black "#000000"
+    white "#dadada"
+  }
+}
