@@ -1,0 +1,15 @@
+themes {
+  idk {
+    bg      "#000000"
+    fg      "#dadada"
+    black   "#000000"
+    red     "#d7005f"
+    green   "#00af5f"
+    yellow  "#fbb806"
+    blue    "#0087d7"
+    magenta "#d787d7"
+    orange  "#fa8128"
+    cyan    "#00afaf"
+    white   "#dadada"
+  }
+}
