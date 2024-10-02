@@ -3,7 +3,7 @@ layout {
         children
         pane size=1 borderless=true {
             plugin location="https://github.com/dj95/zjstatus/releases/latest/download/zjstatus.wasm" {
-                format_left   "{mode} #[fg=white]{session} |{tabs}"
+                format_left   "{mode} #[fg=white]{session} | {tabs}"
                 format_center ""
                 format_right  "{notifications}"
 
@@ -16,8 +16,8 @@ layout {
                 mode_prompt          "#[bg=cyan,bold][{name}]"
                 mode_default_to_mode "prompt"
 
-                tab_normal  "#[fg=white]  {index}:{name}  "
-                tab_active  "#[fg=white,bg=bright_black] <{index}:{name}> "
+                tab_normal  "#[fg=white] {index}:{name} "
+                tab_active  "#[fg=white]<{index}:{name}>"
 
                 notification_format_unread           "#[fg=cyan,blink]  #[fg=cyan] {message} "
                 notification_format_no_notifications ""
