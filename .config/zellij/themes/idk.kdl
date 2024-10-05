@@ -1,6 +1,6 @@
 themes {
   idk {
-    bg      "#000000"
+    bg      "#020202"
     fg      "#dadada"
     black   "#000000"
     red     "#d7005f"
@@ -11,5 +11,18 @@ themes {
     orange  "#fa8128"
     cyan    "#00afaf"
     white   "#dadada"
+  }
+  neovim {
+    bg      "#4f5258"
+    fg      "#d7dae1"
+    black   "#0a0b10"
+    red     "#ffbcb5"
+    green   "#aaedb7"
+    yellow  "#f4d88c"
+    blue    "#9fd8ff"
+    magenta "#ffc3fa"
+    orange  "#ffb347"
+    cyan    "#83efef"
+    white   "#d7dae1"
   }
 }

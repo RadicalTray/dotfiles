@@ -23,7 +23,6 @@ compinit
 ### Env ###
 ###########
 
-# put python venv in here, and if you want the python venv prompt thingy source env.sh after setting prompt
 source ~/.Scripts/env.sh
 
 #####################
@@ -70,13 +69,13 @@ precmd_functions+=(check_last_exit_code)
 # }
 
 PROMPT='%F{green}[zsh]%f %F{blue}%~%f${vcs_info_msg_0_}
-%F{green}%%%f '
+%F{green}%#%f '
 
 ################
 ### Keybinds ###
 ################
 
-bindkey -e
+bindkey -v
 bindkey "^[[1;5D" backward-word
 bindkey "^[[1;5C" forward-word
 
