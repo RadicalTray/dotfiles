@@ -171,7 +171,7 @@ chpwd_functions+=(do-ls)
 ### Plugins ###
 ###############
 
-# export BAT_THEME=fly16
+export BAT_THEME=base16
 
 # fzf
 # -- fzf configs
