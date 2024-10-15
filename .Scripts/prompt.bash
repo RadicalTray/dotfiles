@@ -4,6 +4,7 @@ red='\033[0;31m'
 green='\033[0;32m'
 blue='\033[0;34m'
 
-PS1="${green}[bash]${nc} ${blue}\w${nc} ${green}\$${nc} "
+PS1="${green}[bash]${nc} ${blue}\w${nc}
+${green}\$${nc} "
 
 unset nc red green blue
