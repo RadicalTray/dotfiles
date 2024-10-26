@@ -31,51 +31,35 @@ alias cat="bat --plain --color=auto"
 
 # Config
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.Dotfiles/" --work-tree="$HOME"'
-alias nvim-config="cd ~/.config/nvim;nvim"
-alias wezterm-config="cd ~/.config/wezterm;nvim"
+alias dotfiless='dotfiles status'
+alias dotfilesa='dotfiles add'
+alias dotfilesd='dotfiles diff'
+alias dotfilesds='dotfiles diff --staged'
 
-###########
-### Git ###
-###########
+# Git
 alias gs="git status"
 
 alias ga="git add"
+alias gau="git add --update"
 alias gaa="git add --all"
-alias gaac="git add --all;git commit"
-alias gaacm="git add --all;git commit -m"
+alias gauc="git add --update; git commit"
+alias gaac="git add --all; git commit"
+alias gaucm="git add --update; git commit --message"
+alias gaacm="git add --all; git commit --message"
 
 alias gc="git commit"
-alias gcm="git commit -m"
+alias gcm="git commit --message"
 alias gca="git commit --all"
-alias gcam="git commit --all -m"
+alias gcam="git commit --all --message"
 
 alias gd="git diff"
 alias gds="git diff --staged"
 
-alias gf="git fetch"
-alias gfl="gf;git log HEAD..FETCH_HEAD"
-alias gflo="gfl --oneline"
-alias gflog="gflo --graph"
-alias gfd="gf;git diff HEAD..FETCH_HEAD"
-
-# LOG
-alias gl="git log --color"
-alias gla="gl --all"
-
-alias glo="gl --oneline"
-alias gloa="glo --all"
-
-alias glg="gl --graph"
-alias glga="glg --all"
-
-alias glog="glo --graph"
-alias gloga="glog --all"
-
-# LAZYGIT
-alias lg="lazygit"
+alias gl="git log"
+alias glo="git log --oneline"
+alias glg="git log --graph"
+alias glog="git log --oneline --graph"
 
 alias nvim-kickstart='NVIM_APPNAME="nvim-kickstart" nvim'
 alias vi="nvim"
 alias vim="nvim"
-alias imgcat="wezterm imgcat"
-
