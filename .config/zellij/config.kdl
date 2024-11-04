@@ -9,19 +9,14 @@ keybinds clear-defaults=true {
     shared_except "normal" "renametab" "entersearch" "search" {
         bind "Esc" { SwitchToMode "Normal"; }
     }
-    shared_except "tmux" {
+    shared {
         bind "Alt t" { SwitchToMode "Tmux"; }
-    }
-    shared_except "scroll" {
         bind "Alt [" { SwitchToMode "Scroll"; }
     }
     normal {
-        bind "Alt t" { SwitchToMode "Tmux"; }
         bind "Alt c" { Copy; }
     }
     tmux {
-        bind "Alt t" { SwitchToMode "Normal"; }
-
         bind "\"" { NewPane "Down"; SwitchToMode "Normal"; }
         bind "%" { NewPane "Right"; SwitchToMode "Normal"; }
 
@@ -57,7 +52,6 @@ keybinds clear-defaults=true {
         bind "8" { GoToTab 8; SwitchToMode "Normal"; }
         bind "9" { GoToTab 9; SwitchToMode "Normal"; }
 
-        // bind "Space" { NextSwapLayout; }
         bind "d" { Detach; }
     }
     renametab {
@@ -77,7 +71,6 @@ keybinds clear-defaults=true {
         bind "G" { ScrollToBottom; }
     }
     scroll {
-        bind "Alt [" { SwitchToMode "Normal"; }
         bind "e" { EditScrollback; SwitchToMode "Normal"; }
         bind "/" { SwitchToMode "EnterSearch"; SearchInput 0; }
     }
@@ -86,7 +79,7 @@ keybinds clear-defaults=true {
         bind "Enter" { SwitchToMode "Search"; }
     }
     search {
-        bind "Ctrl c" "Esc" { SwitchToMode "Scroll"; }
+        bind "Esc" "Ctrl c" { SwitchToMode "Scroll"; }
         bind "/" { SwitchToMode "EnterSearch"; }
         bind "n" { Search "down"; }
         bind "p" { Search "up"; }
