@@ -55,5 +55,4 @@ alias glg="git log --graph"
 alias glog="git log --oneline --graph"
 
 alias nvim-kickstart='NVIM_APPNAME="nvim-kickstart" nvim'
-alias vi="nvim"
-alias vim="nvim"
+alias v="nvim"
