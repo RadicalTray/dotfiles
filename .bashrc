@@ -1,5 +1,4 @@
 source ~/.Scripts/env.sh
-# no 'typeset -U' in bash D:
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
