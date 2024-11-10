@@ -1,4 +1,4 @@
-append_path () {
+append_path () { # stolen from /etc/profile
   case ":$PATH:" in
       *:"$1":*)
           ;;
@@ -6,10 +6,17 @@ append_path () {
           PATH="${PATH:+$PATH:}$1"
   esac
 }
-append_path "$HOME/.local/bin"
-unset -f append_path
+insert_path () {
+  case ":$PATH:" in
+      *:"$1":*)
+          ;;
+      *)
+          PATH="$1:$PATH"
+  esac
+}
+insert_path "$HOME/.local/bin"
+unset -f append_path insert_path
 
 export EDITOR="nvim"
 export SUDO_EDITOR="nvim"
 export TERMINAL=/usr/bin/foot
-eval $(dircolors ~/.Scripts/dircolors)

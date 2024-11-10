@@ -1,4 +1,3 @@
-bind 'set show-mode-in-prompt on'
 nc='\033[0m'
 red='\033[0;31m'
 green='\033[0;32m'
