@@ -43,23 +43,7 @@ set-hyprpaper() {
   fi
 }
 
-update-neovim-nightly() {
-  emulate -LR zsh
-  # local red='\033[0;31m'
-  # local nc='\033[0m'
-  local NEOVIM_REPO_PATH=~/.cache/paru/clone/neovim-nightly-bin
-  (
-    cd $NEOVIM_REPO_PATH
-    makepkg -si --needed
-    # local pull_ret=$(git pull)
-    # if [[ "${pull_ret}" == 'Already up to date.' ]] then
-    #   echo
-    #   echo -e "Updating..."
-    #   makepkg -si --needed
-    # else
-    #   echo
-    #   echo -e "${red}There is an update in the aur.${nc}"
-    #   echo
-    # fi
-  )
-}
+update-neovim-nightly() (
+  cd ~/.cache/paru/clone/neovim-nightly-bin
+  makepkg -si --needed
+)
