@@ -32,4 +32,4 @@ function check_last_exit_code() {
 precmd_functions+=(check_last_exit_code)
 
 PROMPT='%F{green}[zsh]%f %F{blue}%~%f${vcs_info_msg_0_}
-${zsh_current_mode_}%F{green}%#%f '
+${zsh_current_mode_}%# '

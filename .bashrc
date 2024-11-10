@@ -6,7 +6,8 @@ source ~/.Scripts/env.sh
 
 ~/.Scripts/reminder.sh
 
-set -o vi
+bind 'set editing-mode vi' # or set -o vi
+bind 'set colored-stats on'
 
 source ~/.Scripts/prompt.bash
 
