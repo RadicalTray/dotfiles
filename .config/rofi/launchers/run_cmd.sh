@@ -15,7 +15,7 @@ cmd_label+=("Capture Desktop")
 shotdisplay() {
     hyprshot -m output
 }
-cmd+=(shotdisplay) # fun fact this is actually just adding a stupid string
+cmd+=(shotdisplay)
 
 cmd_label+=("Capture Window")
 shotwindow() {
@@ -47,6 +47,6 @@ chosen="$(run_rofi)"
 
 for i in "${!cmd_label[@]}"; do
     if [ "$chosen" = "${cmd_label[$i]}" ]; then
-        "${cmd[$i]}" # yep, a string.
+        "${cmd[$i]}"
     fi
 done
