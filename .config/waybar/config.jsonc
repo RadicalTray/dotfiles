@@ -10,9 +10,9 @@
         "hyprland/window",
     ],
     "modules-center": [
-        "tray",
     ],
     "modules-right": [
+        "tray",
         "idle_inhibitor",
         "pulseaudio", // replace with wireplumber?
         "bluetooth",
@@ -23,6 +23,15 @@
         "battery",
         "clock",
     ],
+    "hyprland/workspaces": {
+        "persistent-workspaces" : {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+        },
+    },
     "hyprland/window": {
         "icon": true,
     },
