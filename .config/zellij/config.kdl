@@ -43,6 +43,7 @@ keybinds clear-defaults=true {
         bind "Alt f" { ToggleFocusFullscreen; }
     }
     tmux {
+        bind "Alt t" { SwitchToMode "Normal"; }
         bind "\"" { NewPane "Down"; SwitchToMode "Normal"; }
         bind "%" { NewPane "Right"; SwitchToMode "Normal"; }
         bind "t" { NewTab; SwitchToMode "Normal"; }
