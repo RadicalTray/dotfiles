@@ -16,14 +16,6 @@ set-hyprpaper() {
     return 1
   fi
 
-  local preload_ret=$(hyprctl hyprpaper preload "$1")
-  if [[ "$preload_ret" = "ok" ]]; then
-    echo "${green}Wallpaper preload successful.${nc}"
-  else
-    echo "${red}Wallpaper preload unsuccessful.${nc}"
-    echo "${red}Error: ${preload_ret}${nc}"
-  fi
-
   local monitor=$2
   if [[ -z "$monitor" ]]; then
     if [[ -z "$MY_MONITOR" ]]; then
@@ -34,12 +26,22 @@ set-hyprpaper() {
     monitor=$MY_MONITOR
   fi
 
-  local wallpaper_ret=$(hyprctl hyprpaper wallpaper "$monitor,$1")
-  if [[ "$wallpaper_ret" = "ok" ]]; then
-    echo "${green}Wallpaper is set.${nc}"
+  local wallpaper="$(realpath "$1")"
+
+  local preload_ret=$(hyprctl hyprpaper preload "$wallpaper")
+  if [[ "$preload_ret" = "ok" ]]; then
+    echo -e "${green}Wallpaper preload successful.${nc}"
   else
-    echo "${red}Wallpaper set unsuccessful.${nc}"
-    echo "${red}Error: ${wallpaper_ret}${nc}"
+    echo -e "${red}Wallpaper preload unsuccessful.${nc}"
+    echo -e "${red}Error: ${preload_ret}${nc}"
+  fi
+
+  local wallpaper_ret=$(hyprctl hyprpaper wallpaper "$monitor,$wallpaper")
+  if [[ "$wallpaper_ret" = "ok" ]]; then
+    echo -e "${green}Wallpaper is set.${nc}"
+  else
+    echo -e "${red}Wallpaper set unsuccessful.${nc}"
+    echo -e "${red}Error: ${wallpaper_ret}${nc}"
   fi
 }
 
