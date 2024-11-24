@@ -37,8 +37,8 @@ keybinds clear-defaults=true {
         bind "Alt 9" { GoToTab 9; }
         bind "Alt 0" { GoToTab 10; }
 
-        bind "Alt p" { MoveTab "Left"; SwitchToMode "Normal"; }
-        bind "Alt n" { MoveTab "Right"; SwitchToMode "Normal"; }
+        bind "Alt p" { MoveTab "Left"; }
+        bind "Alt n" { MoveTab "Right"; }
 
         bind "Alt f" { ToggleFocusFullscreen; }
     }
