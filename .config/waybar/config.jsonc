@@ -2,7 +2,9 @@
 {
     // "reload_style_on_change": true,
     "layer": "top",
-    "mode" : "overlay",
+    // "mode" : "overlay", // prob don't work correctly with passthrough in hyprland
+    "exclusive" : false,
+    "passthrough" : false,
     "position": "bottom",
     "height": 26,
     "spacing": 0,
@@ -18,7 +20,7 @@
         "pulseaudio", // replace with wireplumber?
         "bluetooth",
         "network",
-        // "power-profiles-daemon",
+        "power-profiles-daemon",
         "backlight",
         "hyprland/language",
         "battery",
@@ -107,7 +109,7 @@
         "bat": "BAT2"
     },
     "power-profiles-daemon": {
-      "format": "{icon}",
+      "format": " {icon}",
       "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
       "tooltip": true,
       "format-icons": {
