@@ -10,7 +10,6 @@ alias parusyu="paru -Syu --needed"
 alias yaysyu="yay -Syu --needed"
 
 # Convenience
-alias sa="source ~/.zshrc; echo 'Config sourced.'"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
