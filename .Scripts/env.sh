@@ -17,6 +17,6 @@ insert_path () {
 insert_path "$HOME/.local/bin"
 unset -f append_path insert_path
 
-export EDITOR="nvim"
-export SUDO_EDITOR="nvim"
-export TERMINAL=/usr/bin/foot
+export EDITOR="/usr/bin/nvim"
+export SUDO_EDITOR="/usr/bin/nvim"
+export TERMINAL="/usr/bin/foot"

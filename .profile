@@ -1,1 +1,1 @@
-source ~/.Scripts/env.sh
+[ -f ~/.Scripts/env.sh ] && source ~/.Scripts/env.sh

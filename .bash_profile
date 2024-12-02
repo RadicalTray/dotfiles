@@ -1,3 +1,3 @@
-source ~/.Scripts/env.sh
+[[ -f ~/.profile ]] && source ~/.profile
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
