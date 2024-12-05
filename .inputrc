@@ -6,3 +6,4 @@ set match-hidden-files off
 
 set visible-stats on
 set colored-stats on
+set colored-completion-prefix on
