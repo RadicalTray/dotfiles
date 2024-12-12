@@ -20,3 +20,7 @@ unset -f append_path insert_path
 export EDITOR="/usr/bin/nvim"
 export SUDO_EDITOR="/usr/bin/nvim"
 export TERMINAL="/usr/bin/foot"
+if command -v luarocks 2>&1 >/dev/null; then
+    export LUAROCKS_CONFIG="$XDG_CONFIG_HOME/luarocks/config.lua"
+    eval "$(luarocks path --no-bin)"
+fi

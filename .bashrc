@@ -1,3 +1,5 @@
+source ~/.Scripts/env.sh
+
 [[ $- != *i* ]] && return
 
 # Haven't really found a difference in 'bash -c' when put in here
@@ -15,4 +17,4 @@ source ~/.Scripts/aliases.sh
 source ~/.Scripts/functions.sh
 source ~/.Scripts/plugins.sh
 eval "$(zoxide init bash)"
-source ~/.Scripts/local.sh
+[ -f ~/.Scripts/local.sh ] && source ~/.Scripts/local.sh
