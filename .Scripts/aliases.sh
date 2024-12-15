@@ -28,6 +28,9 @@ alias dotfiless='dotfiles status'
 alias dotfilesa='dotfiles add'
 alias dotfilesd='dotfiles diff'
 alias dotfilesds='dotfiles diff --staged'
+alias dotfilesc='dotfiles commit'
+alias dotfilesca='dotfiles commit -a'
+alias dotfilescam='dotfiles commit -a -m'
 
 # Git
 alias gs="git status"
