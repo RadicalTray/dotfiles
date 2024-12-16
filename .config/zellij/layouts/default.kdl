@@ -3,22 +3,22 @@ layout {
         children
         pane size=1 borderless=true {
             plugin location="https://github.com/dj95/zjstatus/releases/latest/download/zjstatus.wasm" {
-                format_left   "{mode}#[bg=0,fg=7] {session} | {tabs}"
+                format_left   "{mode}#[bg=16,fg=7] {session} | {tabs}"
                 format_center ""
                 format_right  ""
-                format_space  "#[bg=0]"
+                format_space  "#[bg=16]"
 
-                mode_normal          "#[bg=0,fg=2,bold][N]"
-                mode_scroll          "#[bg=0,fg=5,bold][S]"
-                mode_enter_search    "#[bg=0,fg=5,bold][ENTER SEARCH]"
-                mode_search          "#[bg=0,fg=5,bold][SEARCH]"
-                mode_rename_tab      "#[bg=0,fg=3,bold][RENAME TAB]"
-                mode_tmux            "#[bg=0,fg=3,bold][T]"
-                mode_prompt          "#[bg=0,fg=6,bold][{name}]"
+                mode_normal          "#[bg=16,fg=2,bold][N]"
+                mode_scroll          "#[bg=16,fg=5,bold][S]"
+                mode_enter_search    "#[bg=16,fg=5,bold][ENTER SEARCH]"
+                mode_search          "#[bg=16,fg=5,bold][SEARCH]"
+                mode_rename_tab      "#[bg=16,fg=3,bold][RENAME TAB]"
+                mode_tmux            "#[bg=16,fg=3,bold][T]"
+                mode_prompt          "#[bg=16,fg=6,bold][{name}]"
                 mode_default_to_mode "prompt"
 
-                tab_normal  "#[bg=0,fg=7] {index}:{name} "
-                tab_active  "#[bg=0,fg=7]<{index}:{name}>"
+                tab_normal  "#[bg=16,fg=7] {index}:{name} "
+                tab_active  "#[bg=16,fg=7]<{index}:{name}>"
             }
         }
     }
