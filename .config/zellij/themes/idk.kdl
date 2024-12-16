@@ -13,16 +13,16 @@ themes {
     white   "#dadada"
   }
   neovim {
-    bg      "#4f5258"
-    fg      "#d7dae1"
-    black   "#0a0b10"
-    red     "#ffbcb5"
-    green   "#aaedb7"
-    yellow  "#f4d88c"
-    blue    "#9fd8ff"
-    magenta "#ffc3fa"
+    bg      8
+    fg      7
+    black   0
+    red     1
+    green   2
+    yellow  3
+    blue    4
+    magenta 5
     orange  "#ffb347"
-    cyan    "#83efef"
-    white   "#d7dae1"
+    cyan    6
+    white   7
   }
 }

@@ -3,25 +3,22 @@ layout {
         children
         pane size=1 borderless=true {
             plugin location="https://github.com/dj95/zjstatus/releases/latest/download/zjstatus.wasm" {
-                format_left   "{mode} #[fg=white]{session} | {tabs}"
+                format_left   "{mode}#[bg=0,fg=7] {session} | {tabs}"
                 format_center ""
-                format_right  "{notifications}"
+                format_right  ""
+                format_space  "#[bg=0]"
 
-                mode_normal          "#[fg=green,bold][N]"
-                mode_scroll          "#[fg=magenta,bold][S]"
-                mode_enter_search    "#[fg=magenta,bold][ENTER SEARCH]"
-                mode_search          "#[fg=magenta,bold][SEARCH]"
-                mode_rename_tab      "#[fg=yellow,bold][RENAME TAB]"
-                mode_tmux            "#[fg=yellow,bold][T]"
-                mode_prompt          "#[bg=cyan,bold][{name}]"
+                mode_normal          "#[bg=0,fg=2,bold][N]"
+                mode_scroll          "#[bg=0,fg=5,bold][S]"
+                mode_enter_search    "#[bg=0,fg=5,bold][ENTER SEARCH]"
+                mode_search          "#[bg=0,fg=5,bold][SEARCH]"
+                mode_rename_tab      "#[bg=0,fg=3,bold][RENAME TAB]"
+                mode_tmux            "#[bg=0,fg=3,bold][T]"
+                mode_prompt          "#[bg=0,fg=6,bold][{name}]"
                 mode_default_to_mode "prompt"
 
-                tab_normal  "#[fg=white] {index}:{name} "
-                tab_active  "#[fg=white]<{index}:{name}>"
-
-                notification_format_unread           "#[fg=cyan,blink]  #[fg=cyan] {message} "
-                notification_format_no_notifications ""
-                notification_show_interval           "10"
+                tab_normal  "#[bg=0,fg=7] {index}:{name} "
+                tab_active  "#[bg=0,fg=7]<{index}:{name}>"
             }
         }
     }
