@@ -29,6 +29,7 @@ alias dotfilesa='dotfiles add'
 alias dotfilesd='dotfiles diff'
 alias dotfilesds='dotfiles diff --staged'
 alias dotfilesc='dotfiles commit'
+alias dotfilescm='dotfiles commit -m'
 alias dotfilesca='dotfiles commit -a'
 alias dotfilescam='dotfiles commit -a -m'
 
