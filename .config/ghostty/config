@@ -1,0 +1,39 @@
+shell-integration-features = no-cursor,no-sudo,title
+gtk-single-instance = false
+
+font-family = Roboto Mono
+font-size = 18.5
+
+theme = NvimDark
+
+selection-foreground = #14161b
+selection-background = #e0e2ea
+
+background = #000000
+background-opacity = 0.65
+
+cursor-color = #e0e2ea
+cursor-style = underline
+cursor-style-blink = false
+cursor-click-to-move = true
+
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = 1
+copy-on-select = false
+
+window-decoration = false
+window-padding-x = 0
+window-padding-y = 0
+window-padding-balance = true
+
+keybind = clear
+
+keybind = ctrl+shift+comma=reload_config
+
+keybind = ctrl+shift+c=copy_to_clipboard
+keybind = ctrl+shift+v=paste_from_clipboard
+
+keybind = ctrl+zero=reset_font_size
+keybind = ctrl+equal=increase_font_size:0.5
+keybind = ctrl+plus=increase_font_size:0.5
+keybind = ctrl+minus=decrease_font_size:0.5

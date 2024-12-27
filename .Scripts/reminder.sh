@@ -74,7 +74,7 @@ green='\033[0;32m'
 # bg_icyan='\033[0;106m'
 # bg_iwhite='\033[0;107m'
 
-echo
-echo -e " ${bold}MANUAL UPDATE:${normal} ${green}neovim-nightly-bin${nc}"
+# echo
+# echo -e " ${bold}MANUAL UPDATE:${normal} ${green}neovim-nightly-bin${nc}"
 # echo -e "         ${bold}CHECK:${normal} ${red}wezterm-git${nc}"
-echo
+# echo
