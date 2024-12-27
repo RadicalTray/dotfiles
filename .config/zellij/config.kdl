@@ -15,16 +15,6 @@ keybinds clear-defaults=true {
         bind "Alt c" { Copy; }
     }
     normal {
-        bind "Alt h" { MoveFocus "Left"; }
-        bind "Alt l" { MoveFocus "Right"; }
-        bind "Alt j" { MoveFocus "Down"; }
-        bind "Alt k" { MoveFocus "Up"; }
-
-        bind "Alt Shift h" { MovePane "Left"; }
-        bind "Alt Shift j" { MovePane "Down"; }
-        bind "Alt Shift k" { MovePane "Up"; }
-        bind "Alt Shift l" { MovePane "Right"; }
-
         bind "Alt 1" { GoToTab 1; }
         bind "Alt 2" { GoToTab 2; }
         bind "Alt 3" { GoToTab 3; }
@@ -35,14 +25,33 @@ keybinds clear-defaults=true {
         bind "Alt 8" { GoToTab 8; }
         bind "Alt 9" { GoToTab 9; }
         bind "Alt 0" { GoToTab 10; }
-
-        bind "Alt p" { MoveTab "Left"; }
-        bind "Alt n" { MoveTab "Right"; }
-
-        bind "Alt f" { ToggleFocusFullscreen; }
     }
     tmux {
         bind "Alt t" { SwitchToMode "Normal"; }
+
+        bind "h" { MoveFocus "Left"; SwitchToMode "Normal"; }
+        bind "l" { MoveFocus "Right"; SwitchToMode "Normal"; }
+        bind "j" { MoveFocus "Down"; SwitchToMode "Normal"; }
+        bind "k" { MoveFocus "Up"; SwitchToMode "Normal"; }
+
+        bind "Shift h" { MovePane "Left"; SwitchToMode "Normal"; }
+        bind "Shift j" { MovePane "Down"; SwitchToMode "Normal"; }
+        bind "Shift k" { MovePane "Up"; SwitchToMode "Normal"; }
+        bind "Shift l" { MovePane "Right"; SwitchToMode "Normal"; }
+
+        bind "1" { GoToTab 1; }
+        bind "2" { GoToTab 2; }
+        bind "3" { GoToTab 3; }
+        bind "4" { GoToTab 4; }
+        bind "5" { GoToTab 5; }
+        bind "6" { GoToTab 6; }
+        bind "7" { GoToTab 7; }
+        bind "8" { GoToTab 8; }
+        bind "9" { GoToTab 9; }
+        bind "0" { GoToTab 10; }
+        bind "p" { MoveTab "Left"; }
+        bind "n" { MoveTab "Right"; }
+
         bind "\"" { NewPane "Down"; SwitchToMode "Normal"; }
         bind "%" { NewPane "Right"; SwitchToMode "Normal"; }
         bind "t" { NewTab; SwitchToMode "Normal"; }
