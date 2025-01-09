@@ -1,4 +1,5 @@
 shell-integration-features = no-cursor,no-sudo,title
+gtk-adwaita = false
 gtk-single-instance = false
 
 font-family = Roboto Mono
@@ -18,7 +19,7 @@ cursor-style-blink = false
 cursor-click-to-move = true
 
 mouse-hide-while-typing = true
-mouse-scroll-multiplier = 1
+mouse-scroll-multiplier = 0.5
 copy-on-select = false
 
 window-decoration = false
