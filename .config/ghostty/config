@@ -11,7 +11,7 @@ selection-foreground = #14161b
 selection-background = #e0e2ea
 
 background = #000000
-background-opacity = 0.65
+background-opacity = 0.85
 
 cursor-color = #e0e2ea
 cursor-style = underline
