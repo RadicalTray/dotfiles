@@ -14,6 +14,7 @@ insert_path () {
           PATH="$1:$PATH"
   esac
 }
+insert_path "$HOME/.cargo/bin"
 insert_path "$HOME/.local/bin"
 unset -f append_path insert_path
 
