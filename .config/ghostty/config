@@ -3,7 +3,7 @@ gtk-adwaita = false
 gtk-single-instance = false
 
 font-family = Roboto Mono
-font-size = 18.5
+font-size = 16.5
 
 theme = NvimDark
 
