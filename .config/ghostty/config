@@ -7,14 +7,42 @@ font-size = 16.5
 
 theme = NvimDark
 
-selection-foreground = #14161b
-selection-background = #e0e2ea
-
 background = #000000
 background-opacity = 0.85
 
+palette = 0=#14161b
+palette = 1=#ffc0b9
+palette = 2=#b3f6c0
+palette = 3=#fce094
+palette = 4=#a6dbff
+palette = 5=#ffcaff
+palette = 6=#8cf8f7
+palette = 7=#e0e2ea
+
+palette = 8=#2c2e33
+palette = 9=#feadcd
+palette = 10=#7ae7b9
+palette = 11=#ffec9e
+palette = 12=#5bd2f0
+palette = 13=#ffc6ff
+palette = 14=#9be7ff
+palette = 15=#eef1f8
+
+palette = 16=#07080d
+palette = 17=#5e0009
+palette = 18=#015825
+palette = 19=#6e5600
+palette = 20=#005078
+palette = 21=#4c0049
+palette = 22=#007676
+palette = 23=#c4c6cd
+
+selection-foreground = #eef1f8
+selection-background = #2c2e33
+
 cursor-color = #e0e2ea
-cursor-style = underline
+cursor-text = #07080d
+cursor-style = block
 cursor-style-blink = false
 cursor-click-to-move = true
 
