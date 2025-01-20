@@ -88,7 +88,7 @@ keybinds clear-defaults=true {
         bind "Esc" "Ctrl c" { SwitchToMode "Scroll"; }
         bind "/" { SwitchToMode "EnterSearch"; }
         bind "n" { Search "down"; }
-        bind "p" { Search "up"; }
+        bind "Shift n" { Search "up"; }
         bind "c" { SearchToggleOption "CaseSensitivity"; }
         bind "r" { SearchToggleOption "Wrap"; }
         bind "w" { SearchToggleOption "WholeWord"; }
