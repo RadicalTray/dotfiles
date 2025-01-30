@@ -3,8 +3,8 @@
     // "reload_style_on_change": true,
     "layer": "top",
     // "mode" : "overlay", // prob don't work correctly with passthrough in hyprland
-    "exclusive" : false,
-    "passthrough" : false,
+    // "exclusive" : false,
+    // "passthrough" : false,
     "position": "bottom",
     "height": 26,
     "spacing": 0,
@@ -17,7 +17,7 @@
     "modules-right": [
         "tray",
         "idle_inhibitor",
-        "pulseaudio", // replace with wireplumber?
+        "pulseaudio",
         "bluetooth",
         "network",
         "power-profiles-daemon",
