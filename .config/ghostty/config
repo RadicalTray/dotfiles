@@ -2,8 +2,8 @@ shell-integration-features = no-cursor,no-sudo,title
 gtk-adwaita = false
 gtk-single-instance = false
 
-font-family = DejaVu Mono
-font-size = 16.5
+font-family = Iosevka
+font-size = 18
 
 theme = NvimDark
 
