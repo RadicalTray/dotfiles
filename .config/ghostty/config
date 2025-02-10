@@ -8,7 +8,7 @@ font-size = 16
 theme = NvimDark
 
 background = #000000
-background-opacity = 0.85
+background-opacity = 0.8
 
 palette = 0=#14161b
 palette = 1=#ffc0b9
