@@ -1,5 +1,4 @@
 shell-integration-features = no-cursor,no-sudo,title
-gtk-adwaita = false
 gtk-single-instance = false
 
 font-family = Roboto Mono

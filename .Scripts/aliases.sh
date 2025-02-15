@@ -1,7 +1,7 @@
 # System
-alias mvy="mv"
-alias rmy="rm"
-alias cpy="cp"
+alias mvy="'mv'"
+alias rmy="'rm'"
+alias cpy="'cp'"
 alias mv="mv -i"
 alias rm="rm -I"
 alias cp="cp -i"
