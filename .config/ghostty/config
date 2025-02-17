@@ -66,4 +66,6 @@ keybind = ctrl+equal=increase_font_size:0.5
 keybind = ctrl+plus=increase_font_size:0.5
 keybind = ctrl+minus=decrease_font_size:0.5
 
+config-file = ?env
+
 # vim: filetype=conf
